@@ -26,5 +26,11 @@ namespace FIS_Proyecto
                 Console.WriteLine("[fmr_principal_Load] " + ex.Message);
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //Mostrar al usuario
+            Utilerias.G_NombreUsuario = textBox1.Text;
+        }
     }
 }

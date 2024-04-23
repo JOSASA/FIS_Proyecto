@@ -28,19 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
+            textBox1 = new TextBox();
+            panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Gainsboro;
+            panel1.Controls.Add(textBox1);
+            panel1.Location = new Point(0, -1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(196, 77);
+            panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.Enabled = false;
+            textBox1.Location = new Point(48, 25);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // menuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(739, 375);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "menuPrincipal";
             Text = "Form1";
             Load += menuPrincipal_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
+        private TextBox textBox1;
     }
 }

@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "borrar (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "borrar (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

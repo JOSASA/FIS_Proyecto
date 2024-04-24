@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "menuPrincipal} (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "menuPrincipal} (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

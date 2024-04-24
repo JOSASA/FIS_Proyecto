@@ -1,3 +1,5 @@
+using ProyFIS;
+
 namespace FIS_Proyecto
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace FIS_Proyecto
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new menuPrincipal());
+            Application.Run(new MenuPrincipal2());
         }
     }
 }

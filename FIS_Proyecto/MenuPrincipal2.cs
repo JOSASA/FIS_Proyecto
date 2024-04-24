@@ -6,6 +6,7 @@ namespace ProyFIS
 {
     public partial class MenuPrincipal2 : Form
     {
+        
         public MenuPrincipal2()
         {
             InitializeComponent();
@@ -16,9 +17,8 @@ namespace ProyFIS
             {
                 FIS_Proyecto.login login = new FIS_Proyecto.login();
                 login.ShowDialog();
-                labelNombre.Text = ("Bienvendo " + Utilerias.G_Usuario);
-                //  this.Text = this.Text + "--> UserName: " + Utilerias.G_Usuario + " Nombre: [" + Utilerias.G_NombreUsuario + "]";
-
+                labelNombre.Text = ("   " + Utilerias.G_Usuario);
+                lblDate.Text = DateTime.Now.ToString();
             }
             catch (Exception ex)
             {
@@ -54,14 +54,14 @@ namespace ProyFIS
         private void iconmaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            iconrestaurar.Visible = true;
+            //iconrestaurar.Visible = true;
             iconmaximizar.Visible = false;
         }
 
         private void iconrestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-            iconrestaurar.Visible = false;
+            //iconrestaurar.Visible = false;
             iconmaximizar.Visible = true;
         }
 

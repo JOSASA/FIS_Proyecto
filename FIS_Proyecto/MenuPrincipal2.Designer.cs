@@ -30,6 +30,7 @@
         {
             var resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal2));
             BarraTitulo = new Panel();
+            lblDate = new Label();
             labelNombre = new Label();
             iconminimizar = new PictureBox();
             iconmaximizar = new PictureBox();
@@ -56,6 +57,7 @@
             // BarraTitulo
             // 
             BarraTitulo.BackColor = Color.WhiteSmoke;
+            BarraTitulo.Controls.Add(lblDate);
             BarraTitulo.Controls.Add(labelNombre);
             BarraTitulo.Controls.Add(iconminimizar);
             BarraTitulo.Controls.Add(iconmaximizar);
@@ -68,15 +70,30 @@
             BarraTitulo.Paint += BarraTitulo_Paint;
             BarraTitulo.MouseDown += BarraTitulo_MouseDown;
             // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Unispace", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDate.ImageAlign = ContentAlignment.MiddleLeft;
+            lblDate.Location = new Point(777, 48);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(82, 23);
+            lblDate.TabIndex = 7;
+            lblDate.Text = "label2";
+            lblDate.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // labelNombre
             // 
             labelNombre.AutoSize = true;
-            labelNombre.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(34, 27);
+            labelNombre.Font = new Font("Unispace", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelNombre.Image = FIS_Proyecto.Properties.Resources.icons8_usuario_24;
+            labelNombre.ImageAlign = ContentAlignment.MiddleLeft;
+            labelNombre.Location = new Point(630, 48);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(65, 25);
+            labelNombre.Size = new Size(82, 23);
             labelNombre.TabIndex = 5;
             labelNombre.Text = "label1";
+            labelNombre.TextAlign = ContentAlignment.MiddleLeft;
             labelNombre.Click += labelNombre_Click;
             // 
             // iconminimizar
@@ -129,6 +146,7 @@
             // btnprov
             // 
             btnprov.FlatAppearance.BorderColor = Color.Black;
+            btnprov.FlatAppearance.BorderSize = 0;
             btnprov.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnprov.FlatStyle = FlatStyle.Flat;
             btnprov.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -140,12 +158,14 @@
             btnprov.Size = new Size(219, 49);
             btnprov.TabIndex = 0;
             btnprov.Text = "Proveedores";
+            btnprov.TextAlign = ContentAlignment.MiddleRight;
             btnprov.UseVisualStyleBackColor = true;
             btnprov.Click += btnprov_Click;
             // 
             // btnProductos
             // 
             btnProductos.FlatAppearance.BorderColor = Color.Black;
+            btnProductos.FlatAppearance.BorderSize = 0;
             btnProductos.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnProductos.FlatStyle = FlatStyle.Flat;
             btnProductos.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -157,11 +177,13 @@
             btnProductos.Size = new Size(219, 49);
             btnProductos.TabIndex = 1;
             btnProductos.Text = "Pedidos";
+            btnProductos.TextAlign = ContentAlignment.MiddleRight;
             btnProductos.UseVisualStyleBackColor = true;
             // 
             // btnClientes
             // 
             btnClientes.FlatAppearance.BorderColor = Color.Black;
+            btnClientes.FlatAppearance.BorderSize = 0;
             btnClientes.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnClientes.FlatStyle = FlatStyle.Flat;
             btnClientes.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -173,11 +195,13 @@
             btnClientes.Size = new Size(219, 49);
             btnClientes.TabIndex = 2;
             btnClientes.Text = "Clientes";
+            btnClientes.TextAlign = ContentAlignment.MiddleRight;
             btnClientes.UseVisualStyleBackColor = true;
             // 
             // btnventa
             // 
             btnventa.FlatAppearance.BorderColor = Color.Black;
+            btnventa.FlatAppearance.BorderSize = 0;
             btnventa.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnventa.FlatStyle = FlatStyle.Flat;
             btnventa.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -189,6 +213,7 @@
             btnventa.Size = new Size(219, 49);
             btnventa.TabIndex = 3;
             btnventa.Text = "Ventas";
+            btnventa.TextAlign = ContentAlignment.MiddleRight;
             btnventa.UseVisualStyleBackColor = true;
             // 
             // btnslide
@@ -205,6 +230,7 @@
             // btnCompras
             // 
             btnCompras.FlatAppearance.BorderColor = Color.Black;
+            btnCompras.FlatAppearance.BorderSize = 0;
             btnCompras.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnCompras.FlatStyle = FlatStyle.Flat;
             btnCompras.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -216,11 +242,13 @@
             btnCompras.Size = new Size(216, 49);
             btnCompras.TabIndex = 4;
             btnCompras.Text = "Compras";
+            btnCompras.TextAlign = ContentAlignment.MiddleRight;
             btnCompras.UseVisualStyleBackColor = true;
             // 
             // btnUsers
             // 
             btnUsers.FlatAppearance.BorderColor = Color.Black;
+            btnUsers.FlatAppearance.BorderSize = 0;
             btnUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnUsers.FlatStyle = FlatStyle.Flat;
             btnUsers.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -232,11 +260,13 @@
             btnUsers.Size = new Size(216, 49);
             btnUsers.TabIndex = 5;
             btnUsers.Text = "Usuarios";
+            btnUsers.TextAlign = ContentAlignment.MiddleRight;
             btnUsers.UseVisualStyleBackColor = true;
             // 
             // btnajustes
             // 
             btnajustes.FlatAppearance.BorderColor = Color.Black;
+            btnajustes.FlatAppearance.BorderSize = 0;
             btnajustes.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnajustes.FlatStyle = FlatStyle.Flat;
             btnajustes.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -248,6 +278,7 @@
             btnajustes.Size = new Size(219, 49);
             btnajustes.TabIndex = 1;
             btnajustes.Text = "Configuracion";
+            btnajustes.TextAlign = ContentAlignment.MiddleRight;
             btnajustes.UseVisualStyleBackColor = true;
             // 
             // MenuVertical
@@ -272,6 +303,7 @@
             // btnHome
             // 
             btnHome.FlatAppearance.BorderColor = Color.Black;
+            btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btnHome.FlatStyle = FlatStyle.Flat;
             btnHome.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -283,6 +315,7 @@
             btnHome.Size = new Size(219, 49);
             btnHome.TabIndex = 2;
             btnHome.Text = "Home";
+            btnHome.TextAlign = ContentAlignment.MiddleRight;
             btnHome.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal2
@@ -324,5 +357,6 @@
         private Panel MenuVertical;
         private Button btnHome;
         private Label labelNombre;
+        private Label lblDate;
     }
 }

@@ -112,5 +112,90 @@ namespace ProyFIS
         {
 
         }
+
+        private void labelNombre_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconcerrar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconminimizar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconmaximizar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BarraTitulo_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnslide_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnventa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnprov_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnajustes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

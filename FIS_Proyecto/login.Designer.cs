@@ -28,74 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnIngresar = new Button();
-            labelUsuario = new Label();
-            labelPassword = new Label();
-            txtUsuario = new TextBox();
-            txtPassword = new TextBox();
-            SuspendLayout();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.labelUsuario = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // btnIngresar
             // 
-            btnIngresar.Location = new Point(324, 196);
-            btnIngresar.Margin = new Padding(3, 2, 3, 2);
-            btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(82, 22);
-            btnIngresar.TabIndex = 0;
-            btnIngresar.Text = "Ingresar";
-            btnIngresar.UseVisualStyleBackColor = true;
-            btnIngresar.Click += btnIngresar_Click;
+            this.btnIngresar.Location = new System.Drawing.Point(278, 170);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(70, 19);
+            this.btnIngresar.TabIndex = 0;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
             // 
             // labelUsuario
             // 
-            labelUsuario.AutoSize = true;
-            labelUsuario.Location = new Point(193, 110);
-            labelUsuario.Name = "labelUsuario";
-            labelUsuario.Size = new Size(47, 15);
-            labelUsuario.TabIndex = 1;
-            labelUsuario.Text = "Usuario";
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Location = new System.Drawing.Point(165, 95);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(43, 13);
+            this.labelUsuario.TabIndex = 1;
+            this.labelUsuario.Text = "Usuario";
             // 
             // labelPassword
             // 
-            labelPassword.AutoSize = true;
-            labelPassword.Location = new Point(172, 147);
-            labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(67, 15);
-            labelPassword.TabIndex = 2;
-            labelPassword.Text = "Contraseña";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(147, 127);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(61, 13);
+            this.labelPassword.TabIndex = 2;
+            this.labelPassword.Text = "Contraseña";
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(307, 110);
-            txtUsuario.Margin = new Padding(3, 2, 3, 2);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(110, 23);
-            txtUsuario.TabIndex = 3;
+            this.txtUsuario.Location = new System.Drawing.Point(263, 95);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(95, 20);
+            this.txtUsuario.TabIndex = 3;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(307, 147);
-            txtPassword.Margin = new Padding(3, 2, 3, 2);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(110, 23);
-            txtPassword.TabIndex = 4;
+            this.txtPassword.Location = new System.Drawing.Point(263, 127);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(95, 20);
+            this.txtPassword.TabIndex = 4;
             // 
             // login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(700, 338);
-            Controls.Add(txtPassword);
-            Controls.Add(txtUsuario);
-            Controls.Add(labelPassword);
-            Controls.Add(labelUsuario);
-            Controls.Add(btnIngresar);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "login";
-            Text = "Login";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(600, 293);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelUsuario);
+            this.Controls.Add(this.btnIngresar);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "login";
+            this.Text = "Login";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

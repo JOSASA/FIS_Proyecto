@@ -1,10 +1,14 @@
-﻿
-using System.Data;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DataLayer
+namespace Data
 {
-    internal class ConexionSQL
+    public class ConexionSQL
     {
         SqlConnection conn;
         String nombreServidor = "LEGION\\ALAN_O";
@@ -23,11 +27,11 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ConexionSQL: "+ex.Message);
+                Console.WriteLine("ConexionSQL: " + ex.Message);
             }
             //Agregar connectionString
-            
-          
+
+
 
 
         }

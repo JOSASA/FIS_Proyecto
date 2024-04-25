@@ -28,316 +28,324 @@
         /// </summary>
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal2));
-            BarraTitulo = new Panel();
-            lblDate = new Label();
-            labelNombre = new Label();
-            iconminimizar = new PictureBox();
-            iconmaximizar = new PictureBox();
-            iconcerrar = new PictureBox();
-            panelContenedor = new Panel();
-            btnprov = new Button();
-            btnProductos = new Button();
-            btnClientes = new Button();
-            btnventa = new Button();
-            btnslide = new PictureBox();
-            btnCompras = new Button();
-            btnUsers = new Button();
-            btnajustes = new Button();
-            MenuVertical = new Panel();
-            btnHome = new Button();
-            BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconminimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconmaximizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconcerrar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnslide).BeginInit();
-            MenuVertical.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal2));
+            this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.iconminimizar = new System.Windows.Forms.PictureBox();
+            this.iconmaximizar = new System.Windows.Forms.PictureBox();
+            this.iconcerrar = new System.Windows.Forms.PictureBox();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnprov = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnventa = new System.Windows.Forms.Button();
+            this.btnslide = new System.Windows.Forms.PictureBox();
+            this.btnCompras = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnajustes = new System.Windows.Forms.Button();
+            this.MenuVertical = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnslide)).BeginInit();
+            this.MenuVertical.SuspendLayout();
+            this.SuspendLayout();
             // 
             // BarraTitulo
             // 
-            BarraTitulo.BackColor = Color.WhiteSmoke;
-            BarraTitulo.Controls.Add(lblDate);
-            BarraTitulo.Controls.Add(labelNombre);
-            BarraTitulo.Controls.Add(iconminimizar);
-            BarraTitulo.Controls.Add(iconmaximizar);
-            BarraTitulo.Controls.Add(iconcerrar);
-            BarraTitulo.Dock = DockStyle.Top;
-            BarraTitulo.Location = new Point(219, 0);
-            BarraTitulo.Name = "BarraTitulo";
-            BarraTitulo.Size = new Size(1081, 74);
-            BarraTitulo.TabIndex = 1;
-            BarraTitulo.Paint += BarraTitulo_Paint;
-            BarraTitulo.MouseDown += BarraTitulo_MouseDown;
+            this.BarraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BarraTitulo.Controls.Add(this.lblDate);
+            this.BarraTitulo.Controls.Add(this.labelNombre);
+            this.BarraTitulo.Controls.Add(this.iconminimizar);
+            this.BarraTitulo.Controls.Add(this.iconmaximizar);
+            this.BarraTitulo.Controls.Add(this.iconcerrar);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.Location = new System.Drawing.Point(188, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(926, 64);
+            this.BarraTitulo.TabIndex = 1;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint_1);
             // 
             // lblDate
             // 
-            lblDate.AutoSize = true;
-            lblDate.Font = new Font("Unispace", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDate.ImageAlign = ContentAlignment.MiddleLeft;
-            lblDate.Location = new Point(777, 48);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(82, 23);
-            lblDate.TabIndex = 7;
-            lblDate.Text = "label2";
-            lblDate.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDate.Location = new System.Drawing.Point(666, 42);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(66, 24);
+            this.lblDate.TabIndex = 7;
+            this.lblDate.Text = "label2";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // labelNombre
             // 
-            labelNombre.AutoSize = true;
-            labelNombre.Font = new Font("Unispace", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNombre.Image = FIS_Proyecto.Properties.Resources.icons8_usuario_24;
-            labelNombre.ImageAlign = ContentAlignment.MiddleLeft;
-            labelNombre.Location = new Point(630, 48);
-            labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(82, 23);
-            labelNombre.TabIndex = 5;
-            labelNombre.Text = "label1";
-            labelNombre.TextAlign = ContentAlignment.MiddleLeft;
-            labelNombre.Click += labelNombre_Click;
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.Image = global::FIS_Proyecto.Properties.Resources.icons8_usuario_24;
+            this.labelNombre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelNombre.Location = new System.Drawing.Point(540, 42);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(66, 24);
+            this.labelNombre.TabIndex = 5;
+            this.labelNombre.Text = "label1";
+            this.labelNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelNombre.Click += new System.EventHandler(this.labelNombre_Click_1);
             // 
             // iconminimizar
             // 
-            iconminimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            iconminimizar.BackColor = Color.Black;
-            iconminimizar.Cursor = Cursors.Hand;
-            iconminimizar.Location = new Point(995, 10);
-            iconminimizar.Name = "iconminimizar";
-            iconminimizar.Size = new Size(20, 18);
-            iconminimizar.SizeMode = PictureBoxSizeMode.Zoom;
-            iconminimizar.TabIndex = 4;
-            iconminimizar.TabStop = false;
-            iconminimizar.Click += iconminimizar_Click;
+            this.iconminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconminimizar.BackColor = System.Drawing.Color.Black;
+            this.iconminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconminimizar.Location = new System.Drawing.Point(852, 9);
+            this.iconminimizar.Name = "iconminimizar";
+            this.iconminimizar.Size = new System.Drawing.Size(17, 16);
+            this.iconminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconminimizar.TabIndex = 4;
+            this.iconminimizar.TabStop = false;
+            this.iconminimizar.Click += new System.EventHandler(this.iconminimizar_Click_1);
             // 
             // iconmaximizar
             // 
-            iconmaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            iconmaximizar.BackColor = Color.Black;
-            iconmaximizar.Cursor = Cursors.Hand;
-            iconmaximizar.Location = new Point(961, 10);
-            iconmaximizar.Name = "iconmaximizar";
-            iconmaximizar.Size = new Size(20, 18);
-            iconmaximizar.SizeMode = PictureBoxSizeMode.CenterImage;
-            iconmaximizar.TabIndex = 2;
-            iconmaximizar.TabStop = false;
-            iconmaximizar.Click += iconmaximizar_Click;
+            this.iconmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconmaximizar.BackColor = System.Drawing.Color.Black;
+            this.iconmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconmaximizar.Location = new System.Drawing.Point(823, 9);
+            this.iconmaximizar.Name = "iconmaximizar";
+            this.iconmaximizar.Size = new System.Drawing.Size(17, 16);
+            this.iconmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconmaximizar.TabIndex = 2;
+            this.iconmaximizar.TabStop = false;
+            this.iconmaximizar.Click += new System.EventHandler(this.iconmaximizar_Click_1);
             // 
             // iconcerrar
             // 
-            iconcerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            iconcerrar.BackColor = Color.Black;
-            iconcerrar.Cursor = Cursors.Hand;
-            iconcerrar.Location = new Point(1046, 9);
-            iconcerrar.Name = "iconcerrar";
-            iconcerrar.Size = new Size(20, 18);
-            iconcerrar.TabIndex = 1;
-            iconcerrar.TabStop = false;
-            iconcerrar.Click += iconcerrar_Click;
+            this.iconcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconcerrar.BackColor = System.Drawing.Color.Black;
+            this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconcerrar.Location = new System.Drawing.Point(896, 8);
+            this.iconcerrar.Name = "iconcerrar";
+            this.iconcerrar.Size = new System.Drawing.Size(17, 16);
+            this.iconcerrar.TabIndex = 1;
+            this.iconcerrar.TabStop = false;
+            this.iconcerrar.Click += new System.EventHandler(this.iconcerrar_Click_1);
             // 
             // panelContenedor
             // 
-            panelContenedor.BackColor = Color.Gainsboro;
-            panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(219, 74);
-            panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1081, 500);
-            panelContenedor.TabIndex = 2;
+            this.panelContenedor.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(188, 64);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(926, 433);
+            this.panelContenedor.TabIndex = 2;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // btnprov
             // 
-            btnprov.FlatAppearance.BorderColor = Color.Black;
-            btnprov.FlatAppearance.BorderSize = 0;
-            btnprov.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnprov.FlatStyle = FlatStyle.Flat;
-            btnprov.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnprov.ForeColor = Color.White;
-            btnprov.Image = (Image)resources.GetObject("btnprov.Image");
-            btnprov.ImageAlign = ContentAlignment.MiddleLeft;
-            btnprov.Location = new Point(0, 259);
-            btnprov.Name = "btnprov";
-            btnprov.Size = new Size(219, 49);
-            btnprov.TabIndex = 0;
-            btnprov.Text = "Proveedores";
-            btnprov.TextAlign = ContentAlignment.MiddleRight;
-            btnprov.UseVisualStyleBackColor = true;
-            btnprov.Click += btnprov_Click;
+            this.btnprov.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnprov.FlatAppearance.BorderSize = 0;
+            this.btnprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprov.ForeColor = System.Drawing.Color.White;
+            this.btnprov.Image = ((System.Drawing.Image)(resources.GetObject("btnprov.Image")));
+            this.btnprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnprov.Location = new System.Drawing.Point(0, 224);
+            this.btnprov.Name = "btnprov";
+            this.btnprov.Size = new System.Drawing.Size(188, 42);
+            this.btnprov.TabIndex = 0;
+            this.btnprov.Text = "Proveedores";
+            this.btnprov.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnprov.UseVisualStyleBackColor = true;
+            this.btnprov.Click += new System.EventHandler(this.btnprov_Click_1);
             // 
             // btnProductos
             // 
-            btnProductos.FlatAppearance.BorderColor = Color.Black;
-            btnProductos.FlatAppearance.BorderSize = 0;
-            btnProductos.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnProductos.FlatStyle = FlatStyle.Flat;
-            btnProductos.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnProductos.ForeColor = Color.White;
-            btnProductos.Image = FIS_Proyecto.Properties.Resources.icons8_order_history_60;
-            btnProductos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProductos.Location = new Point(0, 149);
-            btnProductos.Name = "btnProductos";
-            btnProductos.Size = new Size(219, 49);
-            btnProductos.TabIndex = 1;
-            btnProductos.Text = "Pedidos";
-            btnProductos.TextAlign = ContentAlignment.MiddleRight;
-            btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Image = global::FIS_Proyecto.Properties.Resources.icons8_order_history_60;
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(0, 129);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(188, 42);
+            this.btnProductos.TabIndex = 1;
+            this.btnProductos.Text = "Pedidos";
+            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnClientes
             // 
-            btnClientes.FlatAppearance.BorderColor = Color.Black;
-            btnClientes.FlatAppearance.BorderSize = 0;
-            btnClientes.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnClientes.FlatStyle = FlatStyle.Flat;
-            btnClientes.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClientes.ForeColor = Color.White;
-            btnClientes.Image = FIS_Proyecto.Properties.Resources.icons8_customers_50;
-            btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClientes.Location = new Point(0, 314);
-            btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(219, 49);
-            btnClientes.TabIndex = 2;
-            btnClientes.Text = "Clientes";
-            btnClientes.TextAlign = ContentAlignment.MiddleRight;
-            btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::FIS_Proyecto.Properties.Resources.icons8_customers_50;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 272);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(188, 42);
+            this.btnClientes.TabIndex = 2;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnventa
             // 
-            btnventa.FlatAppearance.BorderColor = Color.Black;
-            btnventa.FlatAppearance.BorderSize = 0;
-            btnventa.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnventa.FlatStyle = FlatStyle.Flat;
-            btnventa.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnventa.ForeColor = Color.White;
-            btnventa.Image = FIS_Proyecto.Properties.Resources.icons8_sales_501;
-            btnventa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnventa.Location = new Point(-3, 204);
-            btnventa.Name = "btnventa";
-            btnventa.Size = new Size(219, 49);
-            btnventa.TabIndex = 3;
-            btnventa.Text = "Ventas";
-            btnventa.TextAlign = ContentAlignment.MiddleRight;
-            btnventa.UseVisualStyleBackColor = true;
+            this.btnventa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnventa.FlatAppearance.BorderSize = 0;
+            this.btnventa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnventa.ForeColor = System.Drawing.Color.White;
+            this.btnventa.Image = global::FIS_Proyecto.Properties.Resources.icons8_sales_501;
+            this.btnventa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnventa.Location = new System.Drawing.Point(-3, 177);
+            this.btnventa.Name = "btnventa";
+            this.btnventa.Size = new System.Drawing.Size(188, 42);
+            this.btnventa.TabIndex = 3;
+            this.btnventa.Text = "Ventas";
+            this.btnventa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnventa.UseVisualStyleBackColor = true;
+            this.btnventa.Click += new System.EventHandler(this.btnventa_Click);
             // 
             // btnslide
             // 
-            btnslide.Cursor = Cursors.Hand;
-            btnslide.Location = new Point(0, 10);
-            btnslide.Name = "btnslide";
-            btnslide.Size = new Size(219, 64);
-            btnslide.SizeMode = PictureBoxSizeMode.Zoom;
-            btnslide.TabIndex = 0;
-            btnslide.TabStop = false;
-            btnslide.Click += btnslide_Click;
+            this.btnslide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnslide.Location = new System.Drawing.Point(0, 9);
+            this.btnslide.Name = "btnslide";
+            this.btnslide.Size = new System.Drawing.Size(188, 55);
+            this.btnslide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnslide.TabIndex = 0;
+            this.btnslide.TabStop = false;
+            this.btnslide.Click += new System.EventHandler(this.btnslide_Click_1);
             // 
             // btnCompras
             // 
-            btnCompras.FlatAppearance.BorderColor = Color.Black;
-            btnCompras.FlatAppearance.BorderSize = 0;
-            btnCompras.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnCompras.FlatStyle = FlatStyle.Flat;
-            btnCompras.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCompras.ForeColor = Color.White;
-            btnCompras.Image = FIS_Proyecto.Properties.Resources.icons8_shopping_60;
-            btnCompras.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCompras.Location = new Point(0, 368);
-            btnCompras.Name = "btnCompras";
-            btnCompras.Size = new Size(216, 49);
-            btnCompras.TabIndex = 4;
-            btnCompras.Text = "Compras";
-            btnCompras.TextAlign = ContentAlignment.MiddleRight;
-            btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.ForeColor = System.Drawing.Color.White;
+            this.btnCompras.Image = global::FIS_Proyecto.Properties.Resources.icons8_shopping_60;
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 319);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(185, 42);
+            this.btnCompras.TabIndex = 4;
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnUsers
             // 
-            btnUsers.FlatAppearance.BorderColor = Color.Black;
-            btnUsers.FlatAppearance.BorderSize = 0;
-            btnUsers.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnUsers.FlatStyle = FlatStyle.Flat;
-            btnUsers.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUsers.ForeColor = Color.White;
-            btnUsers.Image = FIS_Proyecto.Properties.Resources.icons8_users_60;
-            btnUsers.ImageAlign = ContentAlignment.MiddleLeft;
-            btnUsers.Location = new Point(0, 423);
-            btnUsers.Name = "btnUsers";
-            btnUsers.Size = new Size(216, 49);
-            btnUsers.TabIndex = 5;
-            btnUsers.Text = "Usuarios";
-            btnUsers.TextAlign = ContentAlignment.MiddleRight;
-            btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = global::FIS_Proyecto.Properties.Resources.icons8_users_60;
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 367);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(185, 42);
+            this.btnUsers.TabIndex = 5;
+            this.btnUsers.Text = "Usuarios";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnajustes
             // 
-            btnajustes.FlatAppearance.BorderColor = Color.Black;
-            btnajustes.FlatAppearance.BorderSize = 0;
-            btnajustes.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnajustes.FlatStyle = FlatStyle.Flat;
-            btnajustes.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnajustes.ForeColor = Color.White;
-            btnajustes.Image = FIS_Proyecto.Properties.Resources.icons8_setting_50;
-            btnajustes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnajustes.Location = new Point(0, 478);
-            btnajustes.Name = "btnajustes";
-            btnajustes.Size = new Size(219, 49);
-            btnajustes.TabIndex = 1;
-            btnajustes.Text = "Configuracion";
-            btnajustes.TextAlign = ContentAlignment.MiddleRight;
-            btnajustes.UseVisualStyleBackColor = true;
+            this.btnajustes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnajustes.FlatAppearance.BorderSize = 0;
+            this.btnajustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnajustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnajustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnajustes.ForeColor = System.Drawing.Color.White;
+            this.btnajustes.Image = global::FIS_Proyecto.Properties.Resources.icons8_setting_50;
+            this.btnajustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnajustes.Location = new System.Drawing.Point(0, 414);
+            this.btnajustes.Name = "btnajustes";
+            this.btnajustes.Size = new System.Drawing.Size(188, 42);
+            this.btnajustes.TabIndex = 1;
+            this.btnajustes.Text = "Configuracion";
+            this.btnajustes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnajustes.UseVisualStyleBackColor = true;
+            this.btnajustes.Click += new System.EventHandler(this.btnajustes_Click);
             // 
             // MenuVertical
             // 
-            MenuVertical.BackColor = Color.FromArgb(35, 40, 45);
-            MenuVertical.Controls.Add(btnHome);
-            MenuVertical.Controls.Add(btnajustes);
-            MenuVertical.Controls.Add(btnUsers);
-            MenuVertical.Controls.Add(btnCompras);
-            MenuVertical.Controls.Add(btnslide);
-            MenuVertical.Controls.Add(btnventa);
-            MenuVertical.Controls.Add(btnClientes);
-            MenuVertical.Controls.Add(btnProductos);
-            MenuVertical.Controls.Add(btnprov);
-            MenuVertical.Dock = DockStyle.Left;
-            MenuVertical.Location = new Point(0, 0);
-            MenuVertical.Name = "MenuVertical";
-            MenuVertical.Size = new Size(219, 574);
-            MenuVertical.TabIndex = 0;
-            MenuVertical.MouseDown += MenuVertical_MouseDown;
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.MenuVertical.Controls.Add(this.btnHome);
+            this.MenuVertical.Controls.Add(this.btnajustes);
+            this.MenuVertical.Controls.Add(this.btnUsers);
+            this.MenuVertical.Controls.Add(this.btnCompras);
+            this.MenuVertical.Controls.Add(this.btnslide);
+            this.MenuVertical.Controls.Add(this.btnventa);
+            this.MenuVertical.Controls.Add(this.btnClientes);
+            this.MenuVertical.Controls.Add(this.btnProductos);
+            this.MenuVertical.Controls.Add(this.btnprov);
+            this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
+            this.MenuVertical.Name = "MenuVertical";
+            this.MenuVertical.Size = new System.Drawing.Size(188, 497);
+            this.MenuVertical.TabIndex = 0;
+            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
             // btnHome
             // 
-            btnHome.FlatAppearance.BorderColor = Color.Black;
-            btnHome.FlatAppearance.BorderSize = 0;
-            btnHome.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
-            btnHome.FlatStyle = FlatStyle.Flat;
-            btnHome.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnHome.ForeColor = Color.White;
-            btnHome.Image = FIS_Proyecto.Properties.Resources.icons8_home_60;
-            btnHome.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHome.Location = new Point(0, 94);
-            btnHome.Name = "btnHome";
-            btnHome.Size = new Size(219, 49);
-            btnHome.TabIndex = 2;
-            btnHome.Text = "Home";
-            btnHome.TextAlign = ContentAlignment.MiddleRight;
-            btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::FIS_Proyecto.Properties.Resources.icons8_home_60;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 81);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(188, 42);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // MenuPrincipal2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 574);
-            Controls.Add(panelContenedor);
-            Controls.Add(BarraTitulo);
-            Controls.Add(MenuVertical);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "MenuPrincipal2";
-            Text = "Form1";
-            Load += MenuPrincipal2_Load;
-            BarraTitulo.ResumeLayout(false);
-            BarraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconminimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconmaximizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconcerrar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnslide).EndInit();
-            MenuVertical.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1114, 497);
+            this.Controls.Add(this.panelContenedor);
+            this.Controls.Add(this.BarraTitulo);
+            this.Controls.Add(this.MenuVertical);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "MenuPrincipal2";
+            this.Text = "Form1";
+            this.BarraTitulo.ResumeLayout(false);
+            this.BarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnslide)).EndInit();
+            this.MenuVertical.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInterfaz));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.btnprov = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
@@ -70,6 +72,7 @@
             // 
             // lblDate
             // 
+            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -79,9 +82,11 @@
             this.lblDate.TabIndex = 7;
             this.lblDate.Text = "label2";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // labelNombre
             // 
+            this.labelNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,11 +100,12 @@
             // maximizar
             // 
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizar.BackColor = System.Drawing.Color.Black;
+            this.maximizar.BackColor = System.Drawing.Color.Transparent;
             this.maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.maximizar.Location = new System.Drawing.Point(861, 9);
+            this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
+            this.maximizar.Location = new System.Drawing.Point(830, 3);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(17, 16);
+            this.maximizar.Size = new System.Drawing.Size(16, 16);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 4;
             this.maximizar.TabStop = false;
@@ -108,11 +114,12 @@
             // minimizar
             // 
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizar.BackColor = System.Drawing.Color.Black;
+            this.minimizar.BackColor = System.Drawing.Color.Transparent;
             this.minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimizar.Location = new System.Drawing.Point(824, 9);
+            this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
+            this.minimizar.Location = new System.Drawing.Point(866, 3);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(17, 16);
+            this.minimizar.Size = new System.Drawing.Size(16, 16);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.minimizar.TabIndex = 2;
             this.minimizar.TabStop = false;
@@ -121,11 +128,12 @@
             // iconcerrar
             // 
             this.iconcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconcerrar.BackColor = System.Drawing.Color.Black;
+            this.iconcerrar.BackColor = System.Drawing.Color.Transparent;
             this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconcerrar.Location = new System.Drawing.Point(897, 8);
+            this.iconcerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconcerrar.Image")));
+            this.iconcerrar.Location = new System.Drawing.Point(899, 3);
             this.iconcerrar.Name = "iconcerrar";
-            this.iconcerrar.Size = new System.Drawing.Size(17, 16);
+            this.iconcerrar.Size = new System.Drawing.Size(16, 16);
             this.iconcerrar.TabIndex = 1;
             this.iconcerrar.TabStop = false;
             this.iconcerrar.Click += new System.EventHandler(this.iconcerrar_Click);
@@ -313,6 +321,12 @@
             this.MenuVertical.Size = new System.Drawing.Size(188, 505);
             this.MenuVertical.TabIndex = 3;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmInterfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,6 +337,7 @@
             this.Controls.Add(this.MenuVertical);
             this.Name = "frmInterfaz";
             this.Text = "frmMenuDesplegable";
+            this.Load += new System.EventHandler(this.frmInterfaz_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
@@ -353,5 +368,6 @@
         private System.Windows.Forms.Button btnprov;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel MenuVertical;
+        private System.Windows.Forms.Timer timer1;
     }
 }

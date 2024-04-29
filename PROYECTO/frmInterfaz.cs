@@ -35,5 +35,20 @@ namespace PROYECTO
         {
 
         }
+
+        private void iconmaximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void iconminimizar_Click(object sender, EventArgs e)
+        {
+           WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconcerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

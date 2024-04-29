@@ -32,8 +32,8 @@
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
-            this.iconminimizar = new System.Windows.Forms.PictureBox();
-            this.iconmaximizar = new System.Windows.Forms.PictureBox();
+            this.maximizar = new System.Windows.Forms.PictureBox();
+            this.minimizar = new System.Windows.Forms.PictureBox();
             this.iconcerrar = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnajustes = new System.Windows.Forms.Button();
@@ -47,8 +47,8 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).BeginInit();
             this.MenuVertical.SuspendLayout();
@@ -59,8 +59,8 @@
             this.BarraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BarraTitulo.Controls.Add(this.lblDate);
             this.BarraTitulo.Controls.Add(this.labelNombre);
-            this.BarraTitulo.Controls.Add(this.iconminimizar);
-            this.BarraTitulo.Controls.Add(this.iconmaximizar);
+            this.BarraTitulo.Controls.Add(this.maximizar);
+            this.BarraTitulo.Controls.Add(this.minimizar);
             this.BarraTitulo.Controls.Add(this.iconcerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(188, 0);
@@ -92,29 +92,31 @@
             this.labelNombre.Text = "label1";
             this.labelNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // iconminimizar
+            // maximizar
             // 
-            this.iconminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconminimizar.BackColor = System.Drawing.Color.Black;
-            this.iconminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconminimizar.Location = new System.Drawing.Point(809, 9);
-            this.iconminimizar.Name = "iconminimizar";
-            this.iconminimizar.Size = new System.Drawing.Size(17, 16);
-            this.iconminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconminimizar.TabIndex = 4;
-            this.iconminimizar.TabStop = false;
+            this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maximizar.BackColor = System.Drawing.Color.Black;
+            this.maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.maximizar.Location = new System.Drawing.Point(817, 9);
+            this.maximizar.Name = "maximizar";
+            this.maximizar.Size = new System.Drawing.Size(17, 16);
+            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.maximizar.TabIndex = 4;
+            this.maximizar.TabStop = false;
+            this.maximizar.Click += new System.EventHandler(this.iconminimizar_Click);
             // 
-            // iconmaximizar
+            // minimizar
             // 
-            this.iconmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconmaximizar.BackColor = System.Drawing.Color.Black;
-            this.iconmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconmaximizar.Location = new System.Drawing.Point(780, 9);
-            this.iconmaximizar.Name = "iconmaximizar";
-            this.iconmaximizar.Size = new System.Drawing.Size(17, 16);
-            this.iconmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconmaximizar.TabIndex = 2;
-            this.iconmaximizar.TabStop = false;
+            this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizar.BackColor = System.Drawing.Color.Black;
+            this.minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimizar.Location = new System.Drawing.Point(780, 9);
+            this.minimizar.Name = "minimizar";
+            this.minimizar.Size = new System.Drawing.Size(17, 16);
+            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.minimizar.TabIndex = 2;
+            this.minimizar.TabStop = false;
+            this.minimizar.Click += new System.EventHandler(this.iconmaximizar_Click);
             // 
             // iconcerrar
             // 
@@ -126,6 +128,7 @@
             this.iconcerrar.Size = new System.Drawing.Size(17, 16);
             this.iconcerrar.TabIndex = 1;
             this.iconcerrar.TabStop = false;
+            this.iconcerrar.Click += new System.EventHandler(this.iconcerrar_Click);
             // 
             // btnHome
             // 
@@ -302,7 +305,7 @@
             this.MenuVertical.Size = new System.Drawing.Size(188, 484);
             this.MenuVertical.TabIndex = 3;
             // 
-            // frmMenuDesplegable
+            // frmInterfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -310,12 +313,12 @@
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.MenuVertical);
-            this.Name = "frmMenuDesplegable";
+            this.Name = "frmInterfaz";
             this.Text = "frmMenuDesplegable";
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconminimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).EndInit();
             this.MenuVertical.ResumeLayout(false);
@@ -328,8 +331,8 @@
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.PictureBox iconminimizar;
-        private System.Windows.Forms.PictureBox iconmaximizar;
+        private System.Windows.Forms.PictureBox maximizar;
+        private System.Windows.Forms.PictureBox minimizar;
         private System.Windows.Forms.PictureBox iconcerrar;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnajustes;

@@ -37,14 +37,14 @@
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.iconcerrar = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnajustes = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnslide = new System.Windows.Forms.PictureBox();
-            this.btnventa = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnprov = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
+            this.btnProveedores = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -157,23 +157,24 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnajustes
+            // btnConfiguracion
             // 
-            this.btnajustes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnajustes.FlatAppearance.BorderSize = 0;
-            this.btnajustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnajustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnajustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnajustes.ForeColor = System.Drawing.Color.White;
-            this.btnajustes.Image = ((System.Drawing.Image)(resources.GetObject("btnajustes.Image")));
-            this.btnajustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnajustes.Location = new System.Drawing.Point(0, 414);
-            this.btnajustes.Name = "btnajustes";
-            this.btnajustes.Size = new System.Drawing.Size(188, 48);
-            this.btnajustes.TabIndex = 1;
-            this.btnajustes.Text = "Configuracion";
-            this.btnajustes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnajustes.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
+            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 414);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(188, 48);
+            this.btnConfiguracion.TabIndex = 1;
+            this.btnConfiguracion.Text = "Configuracion";
+            this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
             // btnUsers
             // 
@@ -192,6 +193,7 @@
             this.btnUsers.Text = "Usuarios";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnCompras
             // 
@@ -210,6 +212,7 @@
             this.btnCompras.Text = "Compras";
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnslide
             // 
@@ -222,23 +225,24 @@
             this.btnslide.TabIndex = 0;
             this.btnslide.TabStop = false;
             // 
-            // btnventa
+            // btnVentas
             // 
-            this.btnventa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnventa.FlatAppearance.BorderSize = 0;
-            this.btnventa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnventa.ForeColor = System.Drawing.Color.White;
-            this.btnventa.Image = ((System.Drawing.Image)(resources.GetObject("btnventa.Image")));
-            this.btnventa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnventa.Location = new System.Drawing.Point(-3, 177);
-            this.btnventa.Name = "btnventa";
-            this.btnventa.Size = new System.Drawing.Size(188, 48);
-            this.btnventa.TabIndex = 3;
-            this.btnventa.Text = "Ventas";
-            this.btnventa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnventa.UseVisualStyleBackColor = true;
+            this.btnVentas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.ForeColor = System.Drawing.Color.White;
+            this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(-3, 177);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(188, 48);
+            this.btnVentas.TabIndex = 3;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnClientes
             // 
@@ -257,42 +261,45 @@
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // btnProductos
+            // btnPedidos
             // 
-            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(0, 129);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(188, 48);
-            this.btnProductos.TabIndex = 1;
-            this.btnProductos.Text = "Pedidos";
-            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
+            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(0, 129);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(188, 48);
+            this.btnPedidos.TabIndex = 1;
+            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
-            // btnprov
+            // btnProveedores
             // 
-            this.btnprov.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnprov.FlatAppearance.BorderSize = 0;
-            this.btnprov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnprov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnprov.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnprov.ForeColor = System.Drawing.Color.White;
-            this.btnprov.Image = ((System.Drawing.Image)(resources.GetObject("btnprov.Image")));
-            this.btnprov.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnprov.Location = new System.Drawing.Point(0, 224);
-            this.btnprov.Name = "btnprov";
-            this.btnprov.Size = new System.Drawing.Size(188, 48);
-            this.btnprov.TabIndex = 0;
-            this.btnprov.Text = "Proveedores";
-            this.btnprov.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnprov.UseVisualStyleBackColor = true;
+            this.btnProveedores.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnProveedores.FlatAppearance.BorderSize = 0;
+            this.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.ForeColor = System.Drawing.Color.White;
+            this.btnProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Image")));
+            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.Location = new System.Drawing.Point(0, 224);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(188, 48);
+            this.btnProveedores.TabIndex = 0;
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
             // panelContenedor
             // 
@@ -307,14 +314,14 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.MenuVertical.Controls.Add(this.btnHome);
-            this.MenuVertical.Controls.Add(this.btnajustes);
+            this.MenuVertical.Controls.Add(this.btnConfiguracion);
             this.MenuVertical.Controls.Add(this.btnUsers);
             this.MenuVertical.Controls.Add(this.btnCompras);
             this.MenuVertical.Controls.Add(this.btnslide);
-            this.MenuVertical.Controls.Add(this.btnventa);
+            this.MenuVertical.Controls.Add(this.btnVentas);
             this.MenuVertical.Controls.Add(this.btnClientes);
-            this.MenuVertical.Controls.Add(this.btnProductos);
-            this.MenuVertical.Controls.Add(this.btnprov);
+            this.MenuVertical.Controls.Add(this.btnPedidos);
+            this.MenuVertical.Controls.Add(this.btnProveedores);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
@@ -358,14 +365,14 @@
         private System.Windows.Forms.PictureBox minimizar;
         private System.Windows.Forms.PictureBox iconcerrar;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnajustes;
+        private System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.PictureBox btnslide;
-        private System.Windows.Forms.Button btnventa;
+        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnprov;
+        private System.Windows.Forms.Button btnPedidos;
+        private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Timer timer1;

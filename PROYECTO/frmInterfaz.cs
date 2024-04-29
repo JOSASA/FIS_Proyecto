@@ -8,11 +8,13 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO.Forms;
 
 namespace PROYECTO
 {
     public partial class frmInterfaz : Form
     {
+        private Form activeForm;
         public frmInterfaz()
         {
             InitializeComponent();
@@ -33,10 +35,6 @@ namespace PROYECTO
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void iconmaximizar_Click(object sender, EventArgs e)
         {
@@ -66,6 +64,61 @@ namespace PROYECTO
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToString();
+        }
+
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            //ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(childForm);
+            panelContenedor.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            //lblTitle.Text = childForm.Text;
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmPedidos(), sender);
+        }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmHome(), sender);
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmVentas(), sender);
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmProveedores(), sender);
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmClientes(), sender);
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmCompras(), sender);
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmUsuarios(), sender);
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmConfiguracion(), sender);
         }
     }
 }

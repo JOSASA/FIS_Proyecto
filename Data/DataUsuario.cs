@@ -70,7 +70,7 @@ namespace Data
                 comandoSQL.Connection = connSQL.AbrirConexion();
 
                 //Enviar nombre de recursos sql
-                comandoSQL.CommandText = "proc_ValidaUsuario";
+                comandoSQL.CommandText = "proc_ValidarUsuario";
 
                 //Tipo de comando
                 comandoSQL.CommandType = System.Data.CommandType.StoredProcedure;

@@ -48,6 +48,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
@@ -59,6 +60,7 @@
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BarraTitulo.Controls.Add(this.lblTitulo);
             this.BarraTitulo.Controls.Add(this.lblDate);
             this.BarraTitulo.Controls.Add(this.labelNombre);
             this.BarraTitulo.Controls.Add(this.maximizar);
@@ -82,7 +84,6 @@
             this.lblDate.TabIndex = 7;
             this.lblDate.Text = "label2";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // labelNombre
             // 
@@ -334,6 +335,15 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Location = new System.Drawing.Point(39, 22);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(0, 24);
+            this.lblTitulo.TabIndex = 8;
+            // 
             // frmInterfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,5 +386,6 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

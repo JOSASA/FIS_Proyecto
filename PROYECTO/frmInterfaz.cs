@@ -56,11 +56,6 @@ namespace PROYECTO
             WindowState = FormWindowState.Maximized;
         }
 
-        private void lblDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToString();
@@ -79,7 +74,7 @@ namespace PROYECTO
             panelContenedor.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            //lblTitle.Text = childForm.Text;
+            lblTitulo.Text = childForm.Text;
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)

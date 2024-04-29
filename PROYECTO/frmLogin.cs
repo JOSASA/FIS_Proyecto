@@ -46,5 +46,13 @@ namespace PROYECTO
                 Console.WriteLine("[btnIngresar_Click] " + ex.Message);
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir del sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

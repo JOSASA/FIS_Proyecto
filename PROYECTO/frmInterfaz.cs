@@ -18,9 +18,9 @@ namespace PROYECTO
         public frmInterfaz()
         {
             InitializeComponent();
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            Text = string.Empty;
+            ControlBox = false;
+            MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
             try
             {
                 frmLogin login = new frmLogin();
@@ -53,7 +53,7 @@ namespace PROYECTO
 
         private void frmInterfaz_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

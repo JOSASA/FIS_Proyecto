@@ -111,6 +111,7 @@
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.btnIngresar);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

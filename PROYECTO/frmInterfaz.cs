@@ -8,6 +8,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using impresionTicket;
 using PROYECTO.Forms;
 
 namespace PROYECTO
@@ -88,7 +89,7 @@ namespace PROYECTO
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmVentas(), sender);
+                OpenChildForm(new frmVentas(), sender);
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
@@ -114,6 +115,11 @@ namespace PROYECTO
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmConfiguracion(), sender);
+        }
+
+        private void labelNombre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

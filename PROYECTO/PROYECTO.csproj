@@ -88,12 +88,6 @@
     <Compile Include="Forms\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmVentas.Designer.cs">
-      <DependentUpon>frmVentas.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,9 +123,6 @@
     <EmbeddedResource Include="Forms\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmVentas.resx">
-      <DependentUpon>frmVentas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,9 +152,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\impresionTicket\impresionTicket\impresionTicket.csproj">
+      <Project>{46576c12-4e99-4e14-a855-e37c87a9752a}</Project>
+      <Name>impresionTicket</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{bab191f3-990e-4c87-85d5-efd6147b0822}</Project>
       <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{760b9725-37d4-403d-a807-10161835703f}</Project>
+      <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
@@ -182,6 +181,7 @@
     <Content Include="Recursos\icons8-supplier-30.png" />
     <Content Include="Recursos\icons8-users-60.png" />
     <Content Include="Recursos\icons8-usuario-24.png" />
+    <None Include="Recursos\logo innovative minds.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

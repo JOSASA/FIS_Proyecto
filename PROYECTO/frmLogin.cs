@@ -54,5 +54,19 @@ namespace PROYECTO
                 Application.Exit();
             }
         }
+
+        private void pbMostrar_Click(object sender, EventArgs e)
+        {
+            pbOcultar.BringToFront();
+            //Se muestra la contraseña
+            txtPassword.PasswordChar = '\0';
+        }
+
+        private void pbOcultar_Click(object sender, EventArgs e)
+        {
+            pbMostrar.BringToFront();
+            //Se oculta la contraseña
+            txtPassword.PasswordChar = '*';
+        }
     }
 }

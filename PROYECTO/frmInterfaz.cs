@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -49,14 +50,37 @@ namespace PROYECTO
 
         private void iconcerrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //Poder validar datos vs BD vs fileEncrypt
+                Business.Usuarios mUsuarios = new Business.Usuarios();
 
+                    //ingresa en el sistema
+                    //los permisos del usuario que hizo login 
+                    string nombreServidor = "PC-DAVID-BAUDEL\\BAUDELIO_M_V";
+                    string nombreBD = "ABARROTECONCHA";
+                    string usuarioBD = "Pruebas";
+                    string passwordBD = "12345";
+                    string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
 
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
 
+                        // Insertar el registro de inicio de sesión en la base de datos
+                        string insertQuery = "INSERT INTO LoginHistory (Username, LogoutTime) VALUES (@Username, @LogoutTime)";
+                        SqlCommand command = new SqlCommand(insertQuery, connection);
+                        command.Parameters.AddWithValue("@Username", Business.Utilerias.G_Usuario);
+                        command.Parameters.AddWithValue("@LogoutTime", DateTime.Now);
+                        command.ExecuteNonQuery();
+                    }
 
-
-
-
-            Application.Exit();
+                    Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[iconcerrar_Click] " + ex.Message);
+            }
         }
 
         private void frmInterfaz_Load(object sender, EventArgs e)

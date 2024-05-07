@@ -24,7 +24,6 @@ namespace PROYECTO
             try
             {
 
-
                 //Poder validar datos vs BD vs fileEncrypt
                 Business.Usuarios mUsuarios = new Business.Usuarios();
                 mUsuarios.pwd = txtPassword.Text;
@@ -34,10 +33,10 @@ namespace PROYECTO
                 {
                     //ingresa en el sistema
                     //los permisos del usuario que hizo login 
-                    string nombreServidor = "DESKTOP-SUQD0QA\\EMV";
+                    string nombreServidor = "PC-DAVID-BAUDEL\\BAUDELIO_M_V";
                     string nombreBD = "ABARROTECONCHA";
-                    string usuarioBD = "wadmin";
-                    string passwordBD = "sis123";
+                    string usuarioBD = "Pruebas";
+                    string passwordBD = "12345";
                     string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
 
                     using (SqlConnection connection = new SqlConnection(connectionString))
@@ -51,9 +50,6 @@ namespace PROYECTO
                         command.Parameters.AddWithValue("@LoginTime", DateTime.Now);
                         command.ExecuteNonQuery();
                     }
-
-
-
 
                     this.Close();
 

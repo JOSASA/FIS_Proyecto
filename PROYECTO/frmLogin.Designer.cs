@@ -54,9 +54,10 @@
             // 
             this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(82, 121);
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelPassword.Location = new System.Drawing.Point(75, 121);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(61, 13);
+            this.labelPassword.Size = new System.Drawing.Size(85, 18);
             this.labelPassword.TabIndex = 7;
             this.labelPassword.Text = "Contraseña";
             // 
@@ -64,30 +65,38 @@
             // 
             this.labelUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.labelUsuario.Location = new System.Drawing.Point(100, 89);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(43, 13);
+            this.labelUsuario.Size = new System.Drawing.Size(60, 18);
             this.labelUsuario.TabIndex = 6;
             this.labelUsuario.Text = "Usuario";
             // 
             // btnIngresar
             // 
             this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnIngresar.Location = new System.Drawing.Point(175, 164);
+            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Location = new System.Drawing.Point(160, 154);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(70, 26);
+            this.btnIngresar.Size = new System.Drawing.Size(95, 29);
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCerrar.Location = new System.Drawing.Point(284, 210);
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(316, 234);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.Size = new System.Drawing.Size(89, 31);
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -129,6 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(417, 277);
             this.ControlBox = false;
             this.Controls.Add(this.pbMostrar);
@@ -139,6 +149,7 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.btnIngresar);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();

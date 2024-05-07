@@ -34,10 +34,10 @@ namespace PROYECTO
                 {
                     //ingresa en el sistema
                     //los permisos del usuario que hizo login 
-                    string nombreServidor = "DESKTOP-TMJM67R\\SQLEXPRESS";
-                    string nombreBD = "ABARROTECONCHA";
-                    string usuarioBD = "sa";
-                    string passwordBD = "12345";
+                    String nombreServidor = "LEGION\\ALAN_O";
+                    String nombreBD = "ABARROTECONCHA";
+                    String usuarioBD = "admin";
+                    String passwordBD = "admin";
                     string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
 
                     using (SqlConnection connection = new SqlConnection(connectionString))

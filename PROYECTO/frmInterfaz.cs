@@ -55,13 +55,13 @@ namespace PROYECTO
                 //Poder validar datos vs BD vs fileEncrypt
                 Business.Usuarios mUsuarios = new Business.Usuarios();
 
-                    //ingresa en el sistema
-                    //los permisos del usuario que hizo login 
-                    string nombreServidor = "PC-DAVID-BAUDEL\\BAUDELIO_M_V";
-                    string nombreBD = "ABARROTECONCHA";
-                    string usuarioBD = "Pruebas";
-                    string passwordBD = "12345";
-                    string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
+                //ingresa en el sistema
+                //los permisos del usuario que hizo login 
+                String nombreServidor = "LEGION\\ALAN_O";
+                String nombreBD = "ABARROTECONCHA";
+                String usuarioBD = "admin";
+                String passwordBD = "admin";
+                string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
 
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {

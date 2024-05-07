@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.pbOcultar = new System.Windows.Forms.PictureBox();
+            this.pbMostrar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -98,12 +103,36 @@
             this.txtPassword.Size = new System.Drawing.Size(95, 20);
             this.txtPassword.TabIndex = 2;
             // 
+            // pbOcultar
+            // 
+            this.pbOcultar.Image = ((System.Drawing.Image)(resources.GetObject("pbOcultar.Image")));
+            this.pbOcultar.Location = new System.Drawing.Point(261, 121);
+            this.pbOcultar.Name = "pbOcultar";
+            this.pbOcultar.Size = new System.Drawing.Size(24, 20);
+            this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOcultar.TabIndex = 11;
+            this.pbOcultar.TabStop = false;
+            this.pbOcultar.Click += new System.EventHandler(this.pbOcultar_Click);
+            // 
+            // pbMostrar
+            // 
+            this.pbMostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrar.Image")));
+            this.pbMostrar.Location = new System.Drawing.Point(261, 121);
+            this.pbMostrar.Name = "pbMostrar";
+            this.pbMostrar.Size = new System.Drawing.Size(24, 20);
+            this.pbMostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMostrar.TabIndex = 12;
+            this.pbMostrar.TabStop = false;
+            this.pbMostrar.Click += new System.EventHandler(this.pbMostrar_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 277);
             this.ControlBox = false;
+            this.Controls.Add(this.pbMostrar);
+            this.Controls.Add(this.pbOcultar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
@@ -112,6 +141,8 @@
             this.Controls.Add(this.btnIngresar);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,6 +155,8 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.PictureBox pbOcultar;
+        private System.Windows.Forms.PictureBox pbMostrar;
     }
 }
 

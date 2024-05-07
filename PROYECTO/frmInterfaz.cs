@@ -49,6 +49,13 @@ namespace PROYECTO
 
         private void iconcerrar_Click(object sender, EventArgs e)
         {
+
+
+
+
+
+
+
             Application.Exit();
         }
 

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,8 @@ namespace PROYECTO
         {
             try
             {
+
+
                 //Poder validar datos vs BD vs fileEncrypt
                 Business.Usuarios mUsuarios = new Business.Usuarios();
                 mUsuarios.pwd = txtPassword.Text;
@@ -29,8 +33,28 @@ namespace PROYECTO
                 if (mUsuarios.fnValidaLogin())
                 {
                     //ingresa en el sistema
-
                     //los permisos del usuario que hizo login 
+                    string nombreServidor = "DESKTOP-SUQD0QA\\EMV";
+                    string nombreBD = "ABARROTECONCHA";
+                    string usuarioBD = "wadmin";
+                    string passwordBD = "sis123";
+                    string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Insertar el registro de inicio de sesión en la base de datos
+                        string insertQuery = "INSERT INTO LoginHistory (Username, LoginTime) VALUES (@Username, @LoginTime)";
+                        SqlCommand command = new SqlCommand(insertQuery, connection);
+                        command.Parameters.AddWithValue("@Username", mUsuarios.usuario);
+                        command.Parameters.AddWithValue("@LoginTime", DateTime.Now);
+                        command.ExecuteNonQuery();
+                    }
+
+
+
+
                     this.Close();
 
                 }

@@ -11,10 +11,12 @@ namespace Data
     public class ConexionSQL
     {
         SqlConnection conn;
+
         String nombreServidor = "LAPTOP-E87U5309\\SAMUEL2_S_G";
         String nombreBD = "ABARROTECONCHA";
         String usuarioBD = "sa";
         String passwordBD = "12345";
+
         private String ConnectionString;
 
         public ConexionSQL()

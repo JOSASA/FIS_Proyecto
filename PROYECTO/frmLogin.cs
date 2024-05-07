@@ -17,6 +17,7 @@ namespace PROYECTO
         public frmLogin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -33,9 +34,9 @@ namespace PROYECTO
                 {
                     //ingresa en el sistema
                     //los permisos del usuario que hizo login 
-                    string nombreServidor = "PC-DAVID-BAUDEL\\BAUDELIO_M_V";
+                    string nombreServidor = "DESKTOP-TMJM67R\\SQLEXPRESS";
                     string nombreBD = "ABARROTECONCHA";
-                    string usuarioBD = "Pruebas";
+                    string usuarioBD = "sa";
                     string passwordBD = "12345";
                     string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
 

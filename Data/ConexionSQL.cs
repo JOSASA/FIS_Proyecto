@@ -12,9 +12,9 @@ namespace Data
     {
         SqlConnection conn;
 
-        String nombreServidor = "PC-DAVID-BAUDEL\\BAUDELIO_M_V";
+        String nombreServidor = "DESKTOP-TMJM67R\\SQLEXPRESS";
         String nombreBD = "ABARROTECONCHA";
-        String usuarioBD = "Pruebas";
+        String usuarioBD = "sa";
         String passwordBD = "12345";
 
         private String ConnectionString;
@@ -69,6 +69,81 @@ namespace Data
             {
                 Console.WriteLine(ex.Message);
                 return null;
+            }
+        }
+        public DataTable ObtenerCompra()
+        {
+            DataTable dtCompras = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Compras", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtCompras);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtCompras;
+        }
+        public DataTable ObtenerClientes()
+        {
+            DataTable dtClientes = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Clientes", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtClientes);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtClientes;
+        }
+        public bool AgregarCliente(int idCliente, string nombre, string apellido, string telefono, string correo)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Clientes (IdCliente, Nombre, Apellido, Telefono, Correo) VALUES (@IdCliente, @Nombre, @Apellido, @Telefono, @Correo)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", apellido);
+                    cmd.Parameters.AddWithValue("@Telefono", telefono);
+                    cmd.Parameters.AddWithValue("@Correo", correo);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+            finally
+            {
+                conn.Close();
             }
         }
     }

@@ -47,12 +47,20 @@
             // 
             // btnAgregarCarro
             // 
+
             this.btnAgregarCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarro.Location = new System.Drawing.Point(397, 151);
             this.btnAgregarCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarCarro.Name = "btnAgregarCarro";
             this.btnAgregarCarro.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAgregarCarro.Size = new System.Drawing.Size(157, 28);
+
+            this.btnAgregarCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarro.Location = new System.Drawing.Point(298, 123);
+            this.btnAgregarCarro.Name = "btnAgregarCarro";
+            this.btnAgregarCarro.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAgregarCarro.Size = new System.Drawing.Size(118, 49);
+ 
             this.btnAgregarCarro.TabIndex = 1;
             this.btnAgregarCarro.Text = "Agregar al carrito";
             this.btnAgregarCarro.UseVisualStyleBackColor = true;
@@ -60,13 +68,20 @@
             // 
             // lstCarro
             // 
-            this.lstCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCarro.FormattingEnabled = true;
+
             this.lstCarro.ItemHeight = 17;
             this.lstCarro.Location = new System.Drawing.Point(397, 219);
             this.lstCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstCarro.Name = "lstCarro";
             this.lstCarro.Size = new System.Drawing.Size(156, 106);
+
+            this.lstCarro.ItemHeight = 18;
+            this.lstCarro.Location = new System.Drawing.Point(298, 178);
+            this.lstCarro.Name = "lstCarro";
+            this.lstCarro.Size = new System.Drawing.Size(118, 94);
+
             this.lstCarro.TabIndex = 3;
             // 
             // cmbCompras

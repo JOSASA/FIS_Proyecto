@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
+using Data;
 
 namespace PROYECTO
 {
@@ -32,23 +34,18 @@ namespace PROYECTO
 
                 if (mUsuarios.fnValidaLogin())
                 {
-                    //ingresa en el sistema
-                    //los permisos del usuario que hizo login 
-                    String nombreServidor = "LEGION\\ALAN_O";
-                    String nombreBD = "ABARROTECONCHA";
-                    String usuarioBD = "admin";
-                    String passwordBD = "admin";
-                    string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
-
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    DateTime dateTime = DateTime.Now;
+                    Utilerias.G_LoginTime = dateTime;
+                    ConexionSQL conn = new ConexionSQL();
+                    conn.AbrirConexion();
+                    string insertQuery = "INSERT INTO LoginHistory (Username, LoginTime) VALUES (@Username, @LoginTime)";
+                    using (SqlCommand command = new SqlCommand(insertQuery, conn.AbrirConexion()))
                     {
-                        connection.Open();
+                        conn.AbrirConexion();
 
                         // Insertar el registro de inicio de sesión en la base de datos
-                        string insertQuery = "INSERT INTO LoginHistory (Username, LoginTime) VALUES (@Username, @LoginTime)";
-                        SqlCommand command = new SqlCommand(insertQuery, connection);
                         command.Parameters.AddWithValue("@Username", mUsuarios.usuario);
-                        command.Parameters.AddWithValue("@LoginTime", DateTime.Now);
+                        command.Parameters.AddWithValue("@LoginTime", dateTime);
                         command.ExecuteNonQuery();
                     }
 

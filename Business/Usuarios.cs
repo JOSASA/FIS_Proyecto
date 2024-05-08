@@ -41,9 +41,11 @@ namespace Business
             get; set;
         }
 
-        public Usuarios()
+        public int perfil
         {
+            get; set;
         }
+
 
 
         //metodos

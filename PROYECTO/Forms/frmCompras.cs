@@ -72,5 +72,10 @@ namespace PROYECTO.Forms
                 lstCarro.Items.Add(producto);
             }
         }
+
+        private void cmbCompras_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

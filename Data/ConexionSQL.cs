@@ -95,6 +95,78 @@ namespace Data
             }
             return dtCompras;
         }
+        public DataTable ObtenerUsuarios()
+        {
+            DataTable dtCompras = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Usuarios", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtCompras);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtCompras;
+        }
+        public DataTable ObtenerProveedor()
+        {
+            DataTable dtCompras = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Proveedores", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtCompras);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtCompras;
+        }
+        public DataTable ObtenerProductos()
+        {
+            DataTable dtClientes = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Productos", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtClientes);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtClientes;
+        }
         public DataTable ObtenerClientes()
         {
             DataTable dtClientes = new DataTable();

@@ -9,11 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Data;
+using System.Data.SqlClient;
 namespace PROYECTO.Forms
 {
     public partial class frmVentas : Form
     {
         private ConexionSQL conexion;
+        private string nombreProducto;
+        private string precioVenta;
+        private double total;
 
         public frmVentas()
         {
@@ -50,7 +54,47 @@ namespace PROYECTO.Forms
 
         private void textBoxCodigo_TextChanged(object sender, EventArgs e)
         {
-            
+
+            ConexionSQL conn = new ConexionSQL();
+            productos p = new productos();
+
+            conn.AbrirConexion();
+            String codigoProducto = textBoxCodigo.Text;
+            try
+            {
+                string selectQuery = "SELECT * FROM Productos WHERE codigoProducto = @codigoProducto";
+
+                // Crear y ejecutar el comando SQL
+                SqlCommand command = new SqlCommand(selectQuery, conn.AbrirConexion());
+                command.Parameters.AddWithValue("@codigoProducto", codigoProducto);
+
+                // Ejecutar la consulta y obtener los resultados
+                SqlDataReader result = command.ExecuteReader();
+                if (result.Read())
+                {
+                    nombreProducto = result["descripcion"].ToString();
+                    precioVenta = result["precioVenta"].ToString();
+
+                    DGproductos.Rows.Add(codigoProducto, nombreProducto, precioVenta);
+                    textBoxCodigo.Clear();
+                    total += Convert.ToDouble(precioVenta);
+                    labelTotal.Text = "Total: " + total.ToString();
+                    p.total = total;
+                    //  textBoxCodigo.Focus();
+                }
+                // Aquí puedes manejar los resultados obtenidos
+                // Por ejemplo, puedes leer los datos del lector (reader) y hacer algo con ellos
+
+
+                // Cerrar el lector y la conexión
+                result.Close();
+                conn.CerrarConexion();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

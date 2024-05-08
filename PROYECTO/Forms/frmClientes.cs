@@ -93,5 +93,10 @@ namespace PROYECTO.Forms
         {
 
         }
+
+        private void dgvTablaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

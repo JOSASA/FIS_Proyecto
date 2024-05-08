@@ -28,6 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+            this.DGusuarios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGusuarios)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // DGusuarios
+            // 
+            this.DGusuarios.BackgroundColor = System.Drawing.Color.White;
+            this.DGusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGusuarios.Location = new System.Drawing.Point(31, 75);
+            this.DGusuarios.Name = "DGusuarios";
+            this.DGusuarios.RowHeadersWidth = 51;
+            this.DGusuarios.RowTemplate.Height = 24;
+            this.DGusuarios.Size = new System.Drawing.Size(768, 456);
+            this.DGusuarios.TabIndex = 0;
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
@@ -240,11 +256,21 @@
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+
             // 
             // frmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.DGusuarios);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmUsuarios";
+            this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGusuarios)).EndInit();
+
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -253,11 +279,14 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView DGusuarios;
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.MaskedTextBox txtTelefono;
@@ -276,5 +305,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnGuardar;
+
     }
 }

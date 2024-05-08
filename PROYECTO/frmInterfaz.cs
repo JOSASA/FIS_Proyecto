@@ -101,7 +101,7 @@ namespace PROYECTO
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmPedidos(), sender);
+            OpenChildForm(new frmInventario(), sender);
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -130,7 +130,7 @@ namespace PROYECTO
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmUsuarios(), sender);
+            //OpenChildForm(new frmUsuarios(), sender);
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)

@@ -44,11 +44,9 @@
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGproductos
@@ -62,7 +60,7 @@
             this.precio,
             this.cantidad,
             this.subtotal});
-            this.DGproductos.Location = new System.Drawing.Point(78, 9);
+            this.DGproductos.Location = new System.Drawing.Point(154, 224);
             this.DGproductos.Name = "DGproductos";
             this.DGproductos.RowHeadersWidth = 51;
             this.DGproductos.RowTemplate.Height = 24;
@@ -110,6 +108,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.DGproductos);
             this.panel2.Controls.Add(this.labelCodigo);
             this.panel2.Controls.Add(this.textBoxCodigo);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -121,14 +120,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1277, 347);
+            this.panel2.Size = new System.Drawing.Size(1277, 813);
             this.panel2.TabIndex = 3;
             // 
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
             this.labelCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodigo.Location = new System.Drawing.Point(192, 299);
+            this.labelCodigo.Location = new System.Drawing.Point(150, 153);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(165, 20);
             this.labelCodigo.TabIndex = 7;
@@ -136,7 +135,7 @@
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Location = new System.Drawing.Point(491, 297);
+            this.textBoxCodigo.Location = new System.Drawing.Point(449, 151);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(243, 22);
             this.textBoxCodigo.TabIndex = 6;
@@ -147,7 +146,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(148, 192);
+            this.pictureBox1.Location = new System.Drawing.Point(106, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +156,7 @@
             // labelTelefono
             // 
             this.labelTelefono.AutoSize = true;
-            this.labelTelefono.Location = new System.Drawing.Point(280, 252);
+            this.labelTelefono.Location = new System.Drawing.Point(238, 106);
             this.labelTelefono.Name = "labelTelefono";
             this.labelTelefono.Size = new System.Drawing.Size(77, 16);
             this.labelTelefono.TabIndex = 4;
@@ -166,7 +165,7 @@
             // labelDireccion
             // 
             this.labelDireccion.AutoSize = true;
-            this.labelDireccion.Location = new System.Drawing.Point(280, 226);
+            this.labelDireccion.Location = new System.Drawing.Point(238, 80);
             this.labelDireccion.Name = "labelDireccion";
             this.labelDireccion.Size = new System.Drawing.Size(47, 16);
             this.labelDireccion.TabIndex = 3;
@@ -175,7 +174,7 @@
             // labelEmpresa
             // 
             this.labelEmpresa.AutoSize = true;
-            this.labelEmpresa.Location = new System.Drawing.Point(280, 198);
+            this.labelEmpresa.Location = new System.Drawing.Point(238, 52);
             this.labelEmpresa.Name = "labelEmpresa";
             this.labelEmpresa.Size = new System.Drawing.Size(66, 16);
             this.labelEmpresa.TabIndex = 2;
@@ -183,7 +182,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(964, 268);
+            this.btnImprimir.Location = new System.Drawing.Point(922, 122);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(132, 51);
             this.btnImprimir.TabIndex = 1;
@@ -195,21 +194,11 @@
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(979, 238);
+            this.labelTotal.Location = new System.Drawing.Point(937, 92);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(63, 20);
             this.labelTotal.TabIndex = 0;
             this.labelTotal.Text = "Total: ";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DGproductos);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 353);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1277, 455);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // frmVentas
             // 
@@ -217,7 +206,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 808);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "frmVentas";
             this.Text = "formVentas";
             this.Load += new System.EventHandler(this.frmVentas_Load);
@@ -225,7 +213,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -247,6 +234,5 @@
         private System.Windows.Forms.Label labelEmpresa;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label labelTotal;
-        private System.Windows.Forms.Panel panel1;
     }
 }

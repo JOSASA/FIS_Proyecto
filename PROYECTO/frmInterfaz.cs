@@ -101,7 +101,7 @@ namespace PROYECTO
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmPedidos(), sender);
+            OpenChildForm(new frmInventario(), sender);
         }
         private void btnHome_Click(object sender, EventArgs e)
         {

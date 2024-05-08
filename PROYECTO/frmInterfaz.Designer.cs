@@ -44,7 +44,7 @@
             this.btnslide = new System.Windows.Forms.PictureBox();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.btnPedidos = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -288,25 +288,25 @@
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // btnPedidos
+            // btnInventario
             // 
-            this.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 159);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(251, 59);
-            this.btnPedidos.TabIndex = 1;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPedidos.UseVisualStyleBackColor = true;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            this.btnInventario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnInventario.Image")));
+            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.Location = new System.Drawing.Point(0, 159);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(251, 59);
+            this.btnInventario.TabIndex = 1;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnProveedores
             // 
@@ -330,12 +330,13 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(251, 0);
+            this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.panelContenedor.Location = new System.Drawing.Point(251, 78);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1236, 622);
+            this.panelContenedor.Size = new System.Drawing.Size(1236, 544);
             this.panelContenedor.TabIndex = 5;
             // 
             // MenuVertical
@@ -348,7 +349,7 @@
             this.MenuVertical.Controls.Add(this.btnslide);
             this.MenuVertical.Controls.Add(this.btnVentas);
             this.MenuVertical.Controls.Add(this.btnClientes);
-            this.MenuVertical.Controls.Add(this.btnPedidos);
+            this.MenuVertical.Controls.Add(this.btnInventario);
             this.MenuVertical.Controls.Add(this.btnProveedores);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
@@ -402,7 +403,7 @@
         private System.Windows.Forms.PictureBox btnslide;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Button btnPedidos;
+        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel MenuVertical;

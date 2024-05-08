@@ -28,19 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.DGusuarios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGusuarios)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DGusuarios
+            // 
+            this.DGusuarios.BackgroundColor = System.Drawing.Color.White;
+            this.DGusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGusuarios.Location = new System.Drawing.Point(31, 75);
+            this.DGusuarios.Name = "DGusuarios";
+            this.DGusuarios.RowHeadersWidth = 51;
+            this.DGusuarios.RowTemplate.Height = 24;
+            this.DGusuarios.Size = new System.Drawing.Size(768, 456);
+            this.DGusuarios.TabIndex = 0;
             // 
             // frmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.DGusuarios);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmUsuarios";
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGusuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView DGusuarios;
     }
 }

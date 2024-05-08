@@ -9,6 +9,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
+using Data;
 using impresionTicket;
 using PROYECTO.Forms;
 
@@ -52,30 +54,18 @@ namespace PROYECTO
         {
             try
             {
-                //Poder validar datos vs BD vs fileEncrypt
-                Business.Usuarios mUsuarios = new Business.Usuarios();
+                ConexionSQL conn = new ConexionSQL();
+                conn.AbrirConexion();
 
-                //ingresa en el sistema
-                //los permisos del usuario que hizo login 
-                String nombreServidor = "LEGION\\ALAN_O";
-                String nombreBD = "ABARROTECONCHA";
-                String usuarioBD = "admin";
-                String passwordBD = "admin";
-                string connectionString = $"Data Source={nombreServidor};Initial Catalog={nombreBD};User ID={usuarioBD};Password={passwordBD};";
+                string updateQuery = "UPDATE LoginHistory SET LogoutTime = @LogoutTime WHERE LoginTime = @LoginTime";
+                using (SqlCommand command = new SqlCommand(updateQuery, conn.AbrirConexion()))
+                {
+                    command.Parameters.AddWithValue("@LogoutTime", DateTime.Now);
+                    command.Parameters.AddWithValue("@LoginTime", Utilerias.G_LoginTime);
+                    command.ExecuteNonQuery();
+                }
 
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
-
-                        // Insertar el registro de inicio de sesión en la base de datos
-                        string insertQuery = "INSERT INTO LoginHistory (Username, LogoutTime) VALUES (@Username, @LogoutTime)";
-                        SqlCommand command = new SqlCommand(insertQuery, connection);
-                        command.Parameters.AddWithValue("@Username", Business.Utilerias.G_Usuario);
-                        command.Parameters.AddWithValue("@LogoutTime", DateTime.Now);
-                        command.ExecuteNonQuery();
-                    }
-
-                    Application.Exit();
+                Application.Exit();
             }
             catch (Exception ex)
             {

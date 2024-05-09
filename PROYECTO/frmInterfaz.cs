@@ -25,18 +25,7 @@ namespace PROYECTO
             Text = string.Empty;
             ControlBox = false;
             MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
-            try
-            {
-                frmLogin login = new frmLogin();
-                login.ShowDialog();
-                labelNombre.Text = ("   " + Business.Utilerias.G_Usuario);
-                //lblDate.Text = DateTime.Now.ToString();
-                lblDate.Text = DateTime.Now.ToString();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("[fmr_principal_Load] " + ex.Message);
-            }
+            
         }
 
 
@@ -75,7 +64,18 @@ namespace PROYECTO
 
         private void frmInterfaz_Load(object sender, EventArgs e)
         {
-            
+            try
+            {
+                frmLogin login = new frmLogin();
+                login.ShowDialog();
+                labelNombre.Text = ("   " + Business.Utilerias.G_Usuario);
+                //lblDate.Text = DateTime.Now.ToString();
+                lblDate.Text = DateTime.Now.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[fmr_principal_Load] " + ex.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

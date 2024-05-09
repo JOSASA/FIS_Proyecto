@@ -26,12 +26,12 @@ namespace PROYECTO.Forms
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            DGusuarios.DataSource = ConexionSQL.ObtenerUsuarios();
+            //DGusuarios.DataSource = ConexionSQL.ObtenerUsuarios();
 
-            private void btnCerrar_Click(object sender, EventArgs e)
-            {
-                this.Close();
-            }
+            //private void btnCerrar_Click(object sender, EventArgs e)
+            //{
+            //    this.Close();
+            //}
 
             //private void chk_estatus_CheckedChanged(object sender, EventArgs e)
             //{
@@ -68,44 +68,43 @@ namespace PROYECTO.Forms
             //        pbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             //    }
             //}
+        }
 
-            private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Usuarios mUsuario = new Usuarios();
+
+
+            string nombre = txtNombre.Text;
+            string apellidoP = txtApellidoP.Text;
+            string apellidoM = txtApellidoM.Text;
+            string correo = txtCorreo.Text;
+            string telefono = txtTelefono.Text;
+            string usuario = txtUsuario.Text;
+            string password = txtPassword.Text;
+            int perfil = 1;
+
+            if (Utilerias.fnValidaVacios(nombre) == false)
+                MessageBox.Show("Es obligatorio ingresar el nombre de usuario");
+            else if (!Utilerias.fnValidaVacios(apellidoP))
+                MessageBox.Show("Es obligatorio ingresar el apellido Paterno de usuario");
+            else
             {
-                Usuarios mUsuario = new Usuarios();
+                mUsuario.nombre = nombre;
+                mUsuario.usuario = usuario;
+                mUsuario.apellidoP = apellidoP;
+                mUsuario.apellidoM = apellidoM;
+                mUsuario.correo = correo;
+                mUsuario.telefono = telefono;
+                mUsuario.pwd = password;
+                mUsuario.perfil = perfil;
 
-
-                string nombre = txtNombre.Text;
-                string apellidoP = txtApellidoP.Text;
-                string apellidoM = txtApellidoM.Text;
-                string correo = txtCorreo.Text;
-                string telefono = txtTelefono.Text;
-                string usuario = txtUsuario.Text;
-                string password = txtPassword.Text;
-                int perfil = 1;
-
-                if (Utilerias.fnValidaVacios(nombre) == false)
-                    MessageBox.Show("Es obligatorio ingresar el nombre de usuario");
-                else if (!Utilerias.fnValidaVacios(apellidoP))
-                    MessageBox.Show("Es obligatorio ingresar el apellido Paterno de usuario");
+                //todos los demas campos
+                if (mUsuario.fnGuardar())
+                    MessageBox.Show("Usuario grabado con exito!!");
+                // limpiar todos los campos
                 else
-                {
-                    mUsuario.nombre = nombre;
-                    mUsuario.usuario = usuario;
-                    mUsuario.apellidoP = apellidoP;
-                    mUsuario.apellidoM = apellidoM;
-                    mUsuario.correo = correo;
-                    mUsuario.telefono = telefono;
-                    mUsuario.pwd = password;
-                    mUsuario.perfil = perfil;
-
-                    //todos los demas campos
-                    if (mUsuario.fnGuardar())
-                        MessageBox.Show("Usuario grabado con exito!!");
-                    // limpiar todos los campos
-                    else
-                        MessageBox.Show("No es posible guardar datos \n consulte a su administrador de sistemas");
-                }
-
+                    MessageBox.Show("No es posible guardar datos \n consulte a su administrador de sistemas");
             }
         }
     }

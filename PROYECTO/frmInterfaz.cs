@@ -130,7 +130,7 @@ namespace PROYECTO
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new frmUsuarios(), sender);
+            OpenChildForm(new frmUsuarios(), sender);
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)

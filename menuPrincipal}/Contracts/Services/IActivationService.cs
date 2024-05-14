@@ -1,6 +1,0 @@
-﻿namespace menuPrincipal_.Contracts.Services;
-
-public interface IActivationService
-{
-    Task ActivateAsync(object activationArgs);
-}

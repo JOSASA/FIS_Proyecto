@@ -41,9 +41,11 @@ namespace Business
             get; set;
         }
 
-        public Usuarios()
+        public int perfil
         {
+            get; set;
         }
+
 
 
         //metodos
@@ -96,7 +98,7 @@ namespace Business
             {
                 Boolean resultado = false;
                 Data.DataUsuario vUsuario = new Data.DataUsuario();
-                vUsuario.Insertar(nombre, apellidoP, apellidoM, correo, usuario, pwd, telefono, clave);
+                vUsuario.Insertar(nombre, apellidoP, apellidoM, correo, usuario, pwd, telefono, perfil);
                 if (vUsuario.renglonesAfectados > 0)
                 {
                     resultado = true;

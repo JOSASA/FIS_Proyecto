@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
+using Data;
 
 namespace PROYECTO
 {
@@ -15,12 +19,14 @@ namespace PROYECTO
         public frmLogin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
             {
+
                 //Poder validar datos vs BD vs fileEncrypt
                 Business.Usuarios mUsuarios = new Business.Usuarios();
                 mUsuarios.pwd = txtPassword.Text;
@@ -28,9 +34,21 @@ namespace PROYECTO
 
                 if (mUsuarios.fnValidaLogin())
                 {
-                    //ingresa en el sistema
+                    DateTime dateTime = DateTime.Now;
+                    Utilerias.G_LoginTime = dateTime;
+                    ConexionSQL conn = new ConexionSQL();
+                    conn.AbrirConexion();
+                    string insertQuery = "INSERT INTO LoginHistory (Username, LoginTime) VALUES (@Username, @LoginTime)";
+                    using (SqlCommand command = new SqlCommand(insertQuery, conn.AbrirConexion()))
+                    {
+                        conn.AbrirConexion();
 
-                    //los permisos del usuario que hizo login 
+                        // Insertar el registro de inicio de sesión en la base de datos
+                        command.Parameters.AddWithValue("@Username", mUsuarios.usuario);
+                        command.Parameters.AddWithValue("@LoginTime", dateTime);
+                        command.ExecuteNonQuery();
+                    }
+
                     this.Close();
 
                 }
@@ -53,6 +71,20 @@ namespace PROYECTO
             {
                 Application.Exit();
             }
+        }
+
+        private void pbMostrar_Click(object sender, EventArgs e)
+        {
+            pbOcultar.BringToFront();
+            //Se muestra la contraseña
+            txtPassword.PasswordChar = '\0';
+        }
+
+        private void pbOcultar_Click(object sender, EventArgs e)
+        {
+            pbMostrar.BringToFront();
+            //Se oculta la contraseña
+            txtPassword.PasswordChar = '*';
         }
     }
 }

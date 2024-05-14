@@ -22,46 +22,60 @@ namespace PROYECTO.Forms
 
         private void frmCompras_Load(object sender, EventArgs e)
         {
-            CargarProductosBajoStock();
-            CargarCompras();
+            dgvCompra.DataSource = conexionSQL.ObtenerCompra();
+            CargarDatosEnComboBox();
         }
-        private void CargarCompras()
+        private void CargarDatosEnComboBox()
         {
-            dgvCompras.DataSource = conexionSQL.ObtenerCompras();
-        }
-        private void CargarProductosBajoStock()
-        {
-            dgvCompras.DataSource = conexionSQL.ObtenerProductosBajoStock();
+            try
+            {
+                DataTable dtCompras = conexionSQL.ObtenerCompra();
+                if (dtCompras.Rows.Count > 0)
+                {
+                    cmbCompras.Items.Clear();
+                    foreach (DataRow row in dtCompras.Rows)
+                    {
+                        string nombreProducto = row["Producto"].ToString();
+                        cmbCompras.Items.Add(nombreProducto);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron productos.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
         }
 
         private void btnAgregarCarro_Click(object sender, EventArgs e)
         {
-            if (dgvCompras.SelectedRows.Count > 0)
+            try
             {
-                foreach (DataGridViewRow row in dgvCompras.SelectedRows)
-                {
-                    string codigoProducto = row.Cells["codigoProducto"].Value.ToString();
-                    string descripcion = row.Cells["descripcion"].Value.ToString();
-                    string unidadMedida = row.Cells["unidadMedida"].Value.ToString();
-                    string ubicacion = row.Cells["ubicacion"].Value.ToString();
-                    decimal precioCosto = Convert.ToDecimal(row.Cells["precioCosto"].Value);
-                    decimal precioVenta = Convert.ToDecimal(row.Cells["precioVenta"].Value);
-                    int hayActual = Convert.ToInt32(row.Cells["hay"].Value);
-                    int nuevoHay = hayActual + 20; // Agregar 20 unidades
-                    int minimo = Convert.ToInt32(row.Cells["minimo"].Value);
-                    int maximo = Convert.ToInt32(row.Cells["maximo"].Value);
-
-                    conexionSQL.InsertarCompra(codigoProducto, descripcion, unidadMedida, ubicacion, precioCosto, precioVenta, nuevoHay, minimo, maximo);
-                }
-                CargarCompras();
+                string nombreProducto = cmbCompras.SelectedItem.ToString();
+                carrito.Add(nombreProducto);
+                MostrarProductosEnCarrito();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar al carrito: " + ex.Message);
+            }
+        }
+        private void MostrarProductosEnCarrito()
+        {
+            lstCarro.Items.Clear();
+            foreach (string producto in carrito)
+            {
+                lstCarro.Items.Add(producto);
             }
         }
 
-        private void btnConfirmarCompra_Click(object sender, EventArgs e)
+        private void cmbCompras_SelectedIndexChanged(object sender, EventArgs e)
         {
-            conexionSQL.ConfirmarCompra();
-            CargarProductosBajoStock();
-            CargarCompras();
+
         }
     }
 }

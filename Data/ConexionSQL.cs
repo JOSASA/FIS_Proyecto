@@ -12,7 +12,7 @@ namespace Data
     {
         SqlConnection conn;
 
-        String nombreServidor = "DESKTOP-GRG3R00\\LUIS2_V_L";
+        String nombreServidor = "LEGION\\ALAN_O";
         String nombreBD = "ABARROTECONCHA";
         String usuarioBD = "admin";
         String passwordBD = "admin";

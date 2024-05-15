@@ -48,7 +48,7 @@ namespace PROYECTO
                         command.Parameters.AddWithValue("@LoginTime", dateTime);
                         command.ExecuteNonQuery();
                     }
-
+                    conn.CerrarConexion();
                     this.Close();
 
                 }

@@ -15,6 +15,7 @@ namespace PROYECTO
         public frmLogin()
         {
             InitializeComponent();
+            
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -67,6 +68,16 @@ namespace PROYECTO
             pbMostrar.BringToFront();
             //Se oculta la contraseña
             txtPassword.PasswordChar = '*';
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

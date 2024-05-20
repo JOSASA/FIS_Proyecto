@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enviar correo\FormSendMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enviar correo\FormSendMail.Designer.cs">
+      <DependentUpon>FormSendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enviar correo\sendEmail.cs" />
     <Compile Include="Forms\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +123,9 @@
     <Compile Include="impresionTicket\productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Enviar correo\FormSendMail.resx">
+      <DependentUpon>FormSendMail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>

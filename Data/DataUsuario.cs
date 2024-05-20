@@ -102,7 +102,6 @@ namespace Data
             try
             {
 
-
                 //Abrir conexion
                 comandoSQL.Connection = connSQL.AbrirConexion();
 

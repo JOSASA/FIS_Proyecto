@@ -113,7 +113,7 @@ namespace Data
 
                 //Agregar parametro
                 comandoSQL.Parameters.AddWithValue("@usuario", usuario);
-                comandoSQL.Parameters.AddWithValue("@pwd", Encrypt(password));
+                comandoSQL.Parameters.AddWithValue("@password", Encrypt(password));
 
                 //Ejecutar query
                 //renglonesAfectados = comandoSQL.ExecuteNonQuery();

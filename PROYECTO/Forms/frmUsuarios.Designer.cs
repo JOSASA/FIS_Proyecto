@@ -249,7 +249,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "frmUsuarios";
-            this.Text = "Usuarios";
+            this.Text = "                      ";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

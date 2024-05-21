@@ -2,12 +2,13 @@
 using System.Net.Mail;
 using System.Net;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace enviar_Correo
 {
     class logic
     {
-        public async Task<string> SendMailAsync(string to, string subject, string body)
+        public async Task<string> SendMailAsync(string to, string subject, string body, string attachmentPath)
         {
             string message = "Error al enviar este correo. Por favor verifique los datos o intente más tarde.";
             string from = "innovative_software@hotmail.com";
@@ -25,18 +26,19 @@ namespace enviar_Correo
                 };
                 mail.To.Add(to);
 
+                if (!string.IsNullOrEmpty(attachmentPath) && File.Exists(attachmentPath))
+                {
+                    mail.Attachments.Add(new Attachment(attachmentPath));
+                }
+
                 using (SmtpClient client = new SmtpClient("smtp-mail.outlook.com", 587))
                 {
                     client.Credentials = new NetworkCredential(from, password);
                     client.EnableSsl = true;
 
                     await client.SendMailAsync(mail);
-                    message = "¡Correo enviado exitosamente!";
+                    message = "¡Correo enviado exitosamente! Pronto te contactaremos.";
                 }
-            }
-            catch (SmtpFailedRecipientException smtpRecEx)
-            {
-                message = "SMTP Recipient Error: " + smtpRecEx.Message;
             }
             catch (SmtpException smtpEx)
             {

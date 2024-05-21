@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Data;
 using System.Data.SqlClient;
+using iTextSharp.text.pdf;
+using System.IO;
+
 namespace PROYECTO.Forms
 {
     public partial class frmVentas : Form
@@ -24,41 +27,55 @@ namespace PROYECTO.Forms
             InitializeComponent();
             conexion = new ConexionSQL();
         }
+        public void crear(string pdfPath)
+        {
+            crearTicket ticket = new crearTicket
+            {
+                empresa = labelEmpresa.Text,
+                direccion = labelDireccion.Text,
+                telefono = labelTelefono.Text,
+                logotipo = pictureBox1.Image
+            };
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+            for (int i = 0; i < DGproductos.Rows.Count - 1; i++)
+            {
+                productos p = new productos
+                {
+                    codigo = Convert.ToString(DGproductos.Rows[i].Cells[0].Value),
+                    producto = Convert.ToString(DGproductos.Rows[i].Cells[1].Value),
+                    precio = Convert.ToDouble(DGproductos.Rows[i].Cells[2].Value),
+                    cantidad = Convert.ToInt32(DGproductos.Rows[i].Cells[3].Value),
+                    subtotal = Convert.ToDouble(DGproductos.Rows[i].Cells[4].Value)
+                };
+                ticket.listaProductos.Add(p);
+            }
+
+            //ticket.total = total;
+            ticket.CrearPDF(pdfPath);
+        }
+
+        private async void btnImprimir_Click(object sender, EventArgs e)
         {
             if (radioButtonEnviar.Checked)
             {
-                Enviar_correo.FormSendMail formSendMail = new Enviar_correo.FormSendMail();
+                string pdfPath = Path.Combine(Path.GetTempPath(), "ticket.pdf");
+                crear(pdfPath);
+
+                Enviar_correo.FormSendMail formSendMail = new Enviar_correo.FormSendMail(pdfPath); // Pass the PDF path to the form
                 formSendMail.ShowDialog();
             }
             else if (radioButtonImprimir.Checked)
             {
+                crear(string.Empty); // Pass an empty string as pdfPath since it's not needed for printing
                 crearTicket ticket = new crearTicket();
-                productos p = new productos();
-                ticket.empresa = labelEmpresa.Text;
-                ticket.direccion = labelDireccion.Text;
-                ticket.telefono = labelTelefono.Text;
-                ticket.logotipo = pictureBox1.Image;
-
-                for (int i = 0; i < DGproductos.Rows.Count; i++)
-                {
-                    p = new productos();
-                    p.codigo = Convert.ToInt32(DGproductos.Rows[i].Cells[0].Value);
-                    p.producto = Convert.ToString(DGproductos.Rows[i].Cells[1].Value);
-                    p.precio = Convert.ToDouble(DGproductos.Rows[i].Cells[2].Value);
-                    p.cantidad = Convert.ToInt32(DGproductos.Rows[i].Cells[3].Value);
-                    p.subtotal = Convert.ToDouble(DGproductos.Rows[i].Cells[4].Value);
-                    ticket.listaProductos.Add(p);
-                }
-                ticket.imprimir(ticket);
+                ticket.imprimir();
             }
             else
             {
                 MessageBox.Show("Por favor, selecciona una opción.");
             }
-            
         }
+
 
         private void frmVentas_Load(object sender, EventArgs e)
         {

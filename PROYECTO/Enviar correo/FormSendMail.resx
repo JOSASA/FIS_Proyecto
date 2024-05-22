@@ -117,33 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbOcultar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAhFJREFUaEPt2N1SwjAQhmEQdTxBRPH+L1V3k7eZLvlti4GOfWY44NtNXGpbqrvN
-        ZvPwnn5GyFbDDK/IVyEaXlF7eHvmNSR/8uXH1n94fsYksuzLrzZyp83th2fvxdhO9RmefW+CLdXfD8+e
-        zWTJWV4Heb0RGbon7j+8tHz6zsmSww/oWeSVvZKkvvdtsxSHH0jfs2+f7p09IlJbMrhqGn4g/Ue/rN2Z
-        tRHqSxTPed5GpNT8IXIXXcuvMnnKUVMHIkPy6ws21/fiywX0GpSKaI1QVq3DB7QYlNLoMSiVZM9n6mry
-        8ANaDUoWNUNivY8X0RqhrJbeKnPXjEUeSPThK3m0GhKP1zXdbegtiW4q5B6ZQakkumAlG58SuSOXWvfq
-        VhTQalBKHv0qWgOJqkdec1/eXYgC8iJag2SoXKGC1oBYZY+8L3vEAXERrcasjRTtDpEqnvP0OEQBcRXt
-        weKNeKuqFyx9gxOxQ1ZFe2ACqaf+Skqif1AdXtE7MM9aZC2+WeJcf4A5kl9SKfQ7RAFxE5Y4RLPlvmGj
-        5ynJzLMUcUDc1ezHA2HOf0XeTdOtMiNaK1n9KfOGarfKi29Lio68otZF091mIP0neR15m+R27SR32kz6
-        UGO61u3cQXZ4X47vKjUs66I6/EjxvxhKerpesNt/ie9lG/5umNeQeB3DK2YOJFrP8Iq5HXm7ruE3m39n
-        t/sFvHfpzsGDVM4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pbMostrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAaFJREFUaEPt14tOwkAQhWEUMERFVNDw/i+qs8yfietuZ4dLKdH9kiZ65kxbQoM4
-        67qu67p/7+tErE+De7gIOd1ez3oFXHM0XGYUH1wjRPpvcszlWKSfiUOk/y7H5XDeQVJZa/MoG9YH0TvL
-        gnNV0TnXHaerknl6F0+y5hwF5pc2+EJk9qiVuBd2M5KP/mnBpQoyetZG2wM7Gckjb+Wc+iDp3GvVVX10
-        JV/q2EE3w8hFNYw1T/WRYlZHJ8PIRfVorLuoZhgV9syNZM3HhmqVjJ/Swa9Vh5P4isdJsk8d/cDMSJT+
-        ELmoZiTe6rRqRy3DzLOlasgVWYaRi6qRaKUT14q6IXdRzTCq3khE7ZELoW4kCn08UzfVMDkMGqga4jDW
-        DLGLqpFof/KNUDfEYawZ4ibq5m+9AJnvtNbGiiEOY80QR2Rf63+/gDBWDHEYa4Y4hJUDouOxbyTa6CTk
-        lTVDfl1c2xA3UTfE18f1M4wGUcswmgb3UGBsiAuMJ1V8NYhKu3qK6bn/O9ekHV29IdxbE/WbtuReTcp0
-        1HVd13VddyNms2+xZp/9ek5bwgAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

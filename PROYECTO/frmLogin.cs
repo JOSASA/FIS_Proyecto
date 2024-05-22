@@ -48,7 +48,7 @@ namespace PROYECTO
                         command.Parameters.AddWithValue("@LoginTime", dateTime);
                         command.ExecuteNonQuery();
                     }
-
+                    conn.CerrarConexion();
                     this.Close();
 
                 }
@@ -86,5 +86,27 @@ namespace PROYECTO
             //Se oculta la contraseña
             txtPassword.PasswordChar = '*';
         }
+
+        private void btnIngresar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Enter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Llamar al evento Click del botón de inicio de sesión
+                btnIngresar.PerformClick();
+            }
+        }
+
+
     }
 }

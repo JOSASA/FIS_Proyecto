@@ -67,20 +67,18 @@
             this.BarraTitulo.Controls.Add(this.minimizar);
             this.BarraTitulo.Controls.Add(this.iconcerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(251, 0);
-            this.BarraTitulo.Margin = new System.Windows.Forms.Padding(4);
+            this.BarraTitulo.Location = new System.Drawing.Point(188, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1236, 79);
+            this.BarraTitulo.Size = new System.Drawing.Size(927, 64);
             this.BarraTitulo.TabIndex = 4;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(52, 27);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(39, 22);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(0, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(0, 24);
             this.lblTitulo.TabIndex = 8;
             // 
             // lblDate
@@ -89,10 +87,9 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDate.Location = new System.Drawing.Point(888, 52);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.Location = new System.Drawing.Point(666, 42);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(85, 29);
+            this.lblDate.Size = new System.Drawing.Size(66, 24);
             this.lblDate.TabIndex = 7;
             this.lblDate.Text = "label2";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,12 +100,10 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelNombre.Location = new System.Drawing.Point(720, 52);
-            this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNombre.Location = new System.Drawing.Point(540, 42);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(85, 29);
+            this.labelNombre.Size = new System.Drawing.Size(0, 24);
             this.labelNombre.TabIndex = 5;
-            this.labelNombre.Text = "label1";
             this.labelNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelNombre.Click += new System.EventHandler(this.labelNombre_Click);
             // 
@@ -118,10 +113,9 @@
             this.maximizar.BackColor = System.Drawing.Color.Transparent;
             this.maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1107, 4);
-            this.maximizar.Margin = new System.Windows.Forms.Padding(4);
+            this.maximizar.Location = new System.Drawing.Point(830, 3);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(21, 20);
+            this.maximizar.Size = new System.Drawing.Size(16, 16);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 4;
             this.maximizar.TabStop = false;
@@ -133,10 +127,9 @@
             this.minimizar.BackColor = System.Drawing.Color.Transparent;
             this.minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1155, 4);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.minimizar.Location = new System.Drawing.Point(866, 3);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(21, 20);
+            this.minimizar.Size = new System.Drawing.Size(16, 16);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.minimizar.TabIndex = 2;
             this.minimizar.TabStop = false;
@@ -148,10 +141,9 @@
             this.iconcerrar.BackColor = System.Drawing.Color.Transparent;
             this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconcerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconcerrar.Image")));
-            this.iconcerrar.Location = new System.Drawing.Point(1199, 4);
-            this.iconcerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.iconcerrar.Location = new System.Drawing.Point(899, 3);
             this.iconcerrar.Name = "iconcerrar";
-            this.iconcerrar.Size = new System.Drawing.Size(21, 20);
+            this.iconcerrar.Size = new System.Drawing.Size(16, 16);
             this.iconcerrar.TabIndex = 1;
             this.iconcerrar.TabStop = false;
             this.iconcerrar.Click += new System.EventHandler(this.iconcerrar_Click);
@@ -166,10 +158,9 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 100);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Location = new System.Drawing.Point(0, 81);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(251, 59);
+            this.btnHome.Size = new System.Drawing.Size(188, 48);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,10 +177,9 @@
             this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
             this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(0, 510);
-            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 414);
             this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(251, 59);
+            this.btnConfiguracion.Size = new System.Drawing.Size(188, 48);
             this.btnConfiguracion.TabIndex = 1;
             this.btnConfiguracion.Text = "Configuracion";
             this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -206,10 +196,9 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 452);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUsers.Location = new System.Drawing.Point(0, 367);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(251, 59);
+            this.btnUsers.Size = new System.Drawing.Size(188, 48);
             this.btnUsers.TabIndex = 5;
             this.btnUsers.Text = "Usuarios";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -226,10 +215,9 @@
             this.btnCompras.ForeColor = System.Drawing.Color.White;
             this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 393);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCompras.Location = new System.Drawing.Point(0, 319);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(251, 59);
+            this.btnCompras.Size = new System.Drawing.Size(188, 48);
             this.btnCompras.TabIndex = 4;
             this.btnCompras.Text = "Compras";
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -240,10 +228,9 @@
             // 
             this.btnslide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnslide.Image = ((System.Drawing.Image)(resources.GetObject("btnslide.Image")));
-            this.btnslide.Location = new System.Drawing.Point(0, 11);
-            this.btnslide.Margin = new System.Windows.Forms.Padding(4);
+            this.btnslide.Location = new System.Drawing.Point(0, 9);
             this.btnslide.Name = "btnslide";
-            this.btnslide.Size = new System.Drawing.Size(251, 59);
+            this.btnslide.Size = new System.Drawing.Size(188, 48);
             this.btnslide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnslide.TabIndex = 0;
             this.btnslide.TabStop = false;
@@ -258,10 +245,9 @@
             this.btnVentas.ForeColor = System.Drawing.Color.White;
             this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(-4, 218);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVentas.Location = new System.Drawing.Point(-3, 177);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(251, 59);
+            this.btnVentas.Size = new System.Drawing.Size(188, 48);
             this.btnVentas.TabIndex = 3;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -278,10 +264,9 @@
             this.btnClientes.ForeColor = System.Drawing.Color.White;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 335);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClientes.Location = new System.Drawing.Point(0, 272);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(251, 59);
+            this.btnClientes.Size = new System.Drawing.Size(188, 48);
             this.btnClientes.TabIndex = 2;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -298,10 +283,9 @@
             this.btnInventario.ForeColor = System.Drawing.Color.White;
             this.btnInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnInventario.Image")));
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 159);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInventario.Location = new System.Drawing.Point(0, 129);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(251, 59);
+            this.btnInventario.Size = new System.Drawing.Size(188, 48);
             this.btnInventario.TabIndex = 1;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -318,10 +302,9 @@
             this.btnProveedores.ForeColor = System.Drawing.Color.White;
             this.btnProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Image")));
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.Location = new System.Drawing.Point(0, 276);
-            this.btnProveedores.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProveedores.Location = new System.Drawing.Point(0, 224);
             this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(251, 59);
+            this.btnProveedores.Size = new System.Drawing.Size(188, 48);
             this.btnProveedores.TabIndex = 0;
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -333,10 +316,9 @@
             this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.BackColor = System.Drawing.Color.Transparent;
-            this.panelContenedor.Location = new System.Drawing.Point(251, 78);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4);
+            this.panelContenedor.Location = new System.Drawing.Point(188, 63);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1236, 544);
+            this.panelContenedor.Size = new System.Drawing.Size(927, 442);
             this.panelContenedor.TabIndex = 5;
             // 
             // MenuVertical
@@ -353,9 +335,8 @@
             this.MenuVertical.Controls.Add(this.btnProveedores);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
-            this.MenuVertical.Margin = new System.Windows.Forms.Padding(4);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(251, 622);
+            this.MenuVertical.Size = new System.Drawing.Size(188, 505);
             this.MenuVertical.TabIndex = 3;
             // 
             // timer1
@@ -366,13 +347,12 @@
             // 
             // frmInterfaz
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1487, 622);
+            this.ClientSize = new System.Drawing.Size(1115, 505);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.MenuVertical);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInterfaz";
             this.Text = "frmMenuDesplegable";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

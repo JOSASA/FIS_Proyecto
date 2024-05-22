@@ -44,9 +44,14 @@
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
+            this.radioButtonImprimir = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonEnviar = new System.Windows.Forms.RadioButton();
+            this.labelLenght = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGproductos
@@ -60,7 +65,7 @@
             this.precio,
             this.cantidad,
             this.subtotal});
-            this.DGproductos.Location = new System.Drawing.Point(154, 224);
+            this.DGproductos.Location = new System.Drawing.Point(62, 249);
             this.DGproductos.Name = "DGproductos";
             this.DGproductos.RowHeadersWidth = 51;
             this.DGproductos.RowTemplate.Height = 24;
@@ -108,6 +113,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.labelLenght);
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.DGproductos);
             this.panel2.Controls.Add(this.labelCodigo);
             this.panel2.Controls.Add(this.textBoxCodigo);
@@ -182,11 +189,11 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(922, 122);
+            this.btnImprimir.Location = new System.Drawing.Point(892, 192);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(132, 51);
             this.btnImprimir.TabIndex = 1;
-            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.Text = "Cobrar";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
@@ -194,11 +201,51 @@
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(937, 92);
+            this.labelTotal.Location = new System.Drawing.Point(888, 46);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(63, 20);
             this.labelTotal.TabIndex = 0;
             this.labelTotal.Text = "Total: ";
+            // 
+            // radioButtonImprimir
+            // 
+            this.radioButtonImprimir.AutoSize = true;
+            this.radioButtonImprimir.Location = new System.Drawing.Point(23, 20);
+            this.radioButtonImprimir.Name = "radioButtonImprimir";
+            this.radioButtonImprimir.Size = new System.Drawing.Size(75, 20);
+            this.radioButtonImprimir.TabIndex = 8;
+            this.radioButtonImprimir.TabStop = true;
+            this.radioButtonImprimir.Text = "Imprimir";
+            this.radioButtonImprimir.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButtonEnviar);
+            this.panel1.Controls.Add(this.radioButtonImprimir);
+            this.panel1.Location = new System.Drawing.Point(892, 82);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 91);
+            this.panel1.TabIndex = 9;
+            // 
+            // radioButtonEnviar
+            // 
+            this.radioButtonEnviar.AutoSize = true;
+            this.radioButtonEnviar.Location = new System.Drawing.Point(23, 46);
+            this.radioButtonEnviar.Name = "radioButtonEnviar";
+            this.radioButtonEnviar.Size = new System.Drawing.Size(131, 20);
+            this.radioButtonEnviar.TabIndex = 9;
+            this.radioButtonEnviar.TabStop = true;
+            this.radioButtonEnviar.Text = "Enviar por correo";
+            this.radioButtonEnviar.UseVisualStyleBackColor = true;
+            // 
+            // labelLenght
+            // 
+            this.labelLenght.AutoSize = true;
+            this.labelLenght.Location = new System.Drawing.Point(449, 180);
+            this.labelLenght.Name = "labelLenght";
+            this.labelLenght.Size = new System.Drawing.Size(14, 16);
+            this.labelLenght.TabIndex = 10;
+            this.labelLenght.Text = "0";
             // 
             // frmVentas
             // 
@@ -213,6 +260,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +283,9 @@
         private System.Windows.Forms.Label labelEmpresa;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButtonEnviar;
+        private System.Windows.Forms.RadioButton radioButtonImprimir;
+        private System.Windows.Forms.Label labelLenght;
     }
 }

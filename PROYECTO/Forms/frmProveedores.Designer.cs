@@ -33,10 +33,10 @@ namespace PROYECTO.Forms
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.buttonNuevoProveedor = new System.Windows.Forms.Button();
             this.DGproveedores = new System.Windows.Forms.DataGridView();
-            this.buttonModificar = new System.Windows.Forms.Button();
             this.textBoxNumero = new System.Windows.Forms.TextBox();
             this.textBoxEmpresa = new System.Windows.Forms.TextBox();
             this.textBoxRepresentante = new System.Windows.Forms.TextBox();
@@ -59,26 +59,42 @@ namespace PROYECTO.Forms
             this.panel1.Controls.Add(this.buttonNuevoProveedor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1326, 34);
+            this.panel1.Size = new System.Drawing.Size(994, 28);
             this.panel1.TabIndex = 0;
             // 
             // buttonEliminar
             // 
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(437, 0);
+            this.buttonEliminar.Location = new System.Drawing.Point(328, 0);
+            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(192, 34);
+            this.buttonEliminar.Size = new System.Drawing.Size(144, 28);
             this.buttonEliminar.TabIndex = 2;
             this.buttonEliminar.Text = "Eliminar Proveedor";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
+            // buttonModificar
+            // 
+            this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonModificar.Location = new System.Drawing.Point(168, 0);
+            this.buttonModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(144, 28);
+            this.buttonModificar.TabIndex = 1;
+            this.buttonModificar.Text = "Modificar proveedor";
+            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonGuardar
             // 
             this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardar.Location = new System.Drawing.Point(654, 0);
+            this.buttonGuardar.Location = new System.Drawing.Point(490, 0);
+            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(192, 34);
+            this.buttonGuardar.Size = new System.Drawing.Size(144, 28);
             this.buttonGuardar.TabIndex = 1;
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.UseVisualStyleBackColor = true;
@@ -87,8 +103,9 @@ namespace PROYECTO.Forms
             // buttonNuevoProveedor
             // 
             this.buttonNuevoProveedor.Location = new System.Drawing.Point(0, 0);
+            this.buttonNuevoProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonNuevoProveedor.Name = "buttonNuevoProveedor";
-            this.buttonNuevoProveedor.Size = new System.Drawing.Size(192, 34);
+            this.buttonNuevoProveedor.Size = new System.Drawing.Size(144, 28);
             this.buttonNuevoProveedor.TabIndex = 0;
             this.buttonNuevoProveedor.Text = "Nuevo Proveedor";
             this.buttonNuevoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,107 +117,109 @@ namespace PROYECTO.Forms
             // 
             this.DGproveedores.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DGproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGproveedores.Location = new System.Drawing.Point(0, 69);
+            this.DGproveedores.Location = new System.Drawing.Point(0, 56);
+            this.DGproveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DGproveedores.Name = "DGproveedores";
             this.DGproveedores.RowHeadersWidth = 51;
-            this.DGproveedores.Size = new System.Drawing.Size(758, 528);
+            this.DGproveedores.Size = new System.Drawing.Size(568, 429);
             this.DGproveedores.TabIndex = 1;
-            // 
-            // buttonModificar
-            // 
-            this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonModificar.Location = new System.Drawing.Point(224, 0);
-            this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(192, 34);
-            this.buttonModificar.TabIndex = 1;
-            this.buttonModificar.Text = "Modificar proveedor";
-            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.DGproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGproveedores_CellContentClick);
             // 
             // textBoxNumero
             // 
-            this.textBoxNumero.Location = new System.Drawing.Point(866, 100);
+            this.textBoxNumero.Location = new System.Drawing.Point(650, 81);
+            this.textBoxNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNumero.Name = "textBoxNumero";
-            this.textBoxNumero.Size = new System.Drawing.Size(100, 22);
+            this.textBoxNumero.Size = new System.Drawing.Size(76, 20);
             this.textBoxNumero.TabIndex = 2;
             // 
             // textBoxEmpresa
             // 
-            this.textBoxEmpresa.Location = new System.Drawing.Point(866, 140);
+            this.textBoxEmpresa.Location = new System.Drawing.Point(650, 114);
+            this.textBoxEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEmpresa.Name = "textBoxEmpresa";
-            this.textBoxEmpresa.Size = new System.Drawing.Size(100, 22);
+            this.textBoxEmpresa.Size = new System.Drawing.Size(76, 20);
             this.textBoxEmpresa.TabIndex = 3;
             // 
             // textBoxRepresentante
             // 
-            this.textBoxRepresentante.Location = new System.Drawing.Point(866, 179);
+            this.textBoxRepresentante.Location = new System.Drawing.Point(650, 145);
+            this.textBoxRepresentante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRepresentante.Name = "textBoxRepresentante";
-            this.textBoxRepresentante.Size = new System.Drawing.Size(100, 22);
+            this.textBoxRepresentante.Size = new System.Drawing.Size(76, 20);
             this.textBoxRepresentante.TabIndex = 4;
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(866, 218);
+            this.textBoxTelefono.Location = new System.Drawing.Point(650, 177);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTelefono.Size = new System.Drawing.Size(76, 20);
             this.textBoxTelefono.TabIndex = 5;
             // 
             // textBoxCorreo
             // 
-            this.textBoxCorreo.Location = new System.Drawing.Point(866, 258);
+            this.textBoxCorreo.Location = new System.Drawing.Point(650, 210);
+            this.textBoxCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCorreo.Name = "textBoxCorreo";
-            this.textBoxCorreo.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCorreo.Size = new System.Drawing.Size(76, 20);
             this.textBoxCorreo.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(826, 106);
+            this.label1.Location = new System.Drawing.Point(620, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(798, 143);
+            this.label2.Location = new System.Drawing.Point(598, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Empresa";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(764, 182);
+            this.label3.Location = new System.Drawing.Point(573, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 16);
+            this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Representante";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(802, 221);
+            this.label4.Location = new System.Drawing.Point(602, 180);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 16);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Telefono";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(802, 264);
+            this.label5.Location = new System.Drawing.Point(602, 214);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "correo";
             // 
             // frmProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 607);
+            this.ClientSize = new System.Drawing.Size(994, 493);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -213,7 +232,7 @@ namespace PROYECTO.Forms
             this.Controls.Add(this.textBoxNumero);
             this.Controls.Add(this.DGproveedores);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmProveedores";
             this.Text = "FrmProveedores";
             this.Load += new System.EventHandler(this.frmProveedores_Load);

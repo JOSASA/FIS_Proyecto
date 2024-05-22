@@ -21,9 +21,12 @@ namespace PROYECTO.Forms
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
+            CargarClientes();
+        }
+        private void CargarClientes()
+        {
             dgvTablaClientes.DataSource = conexionSQL.ObtenerClientes();
         }
-
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text.Trim();
@@ -36,7 +39,7 @@ namespace PROYECTO.Forms
                 if (conexionSQL.AgregarCliente(nombre, apellido, telefono, correo))
                 {
                     MessageBox.Show("Cliente agregado correctamente.");
-                    dgvTablaClientes.DataSource = conexionSQL.ObtenerClientes();
+                    CargarClientes();
                     LimpiarCamposClientes();
                 }
                 else
@@ -69,14 +72,6 @@ namespace PROYECTO.Forms
             return true;
         }
 
-        private void LimpiarCamposClientes()
-        {
-            txtNombre.Text = "";
-            txtApellido.Text = "";
-            txtTelefono.Text = "";
-            txtCorreo.Text = "";
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -84,13 +79,20 @@ namespace PROYECTO.Forms
 
         private void dgvTablaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvTablaClientes.Rows[e.RowIndex];
+                txtIdCliente.Text = row.Cells["IdCliente"].Value.ToString();
+                txtNombre.Text = row.Cells["Nombre"].Value.ToString();
+                txtApellido.Text = row.Cells["Apellido"].Value.ToString();
+                txtTelefono.Text = row.Cells["Telefono"].Value.ToString();
+                txtCorreo.Text = row.Cells["Correo"].Value.ToString();
+            }
         }
 
         private void btnEliminarCliente_Click(object sender, EventArgs e)
         {
-            int idCliente;
-            if (int.TryParse(txtIdCliente.Text, out idCliente))
+            if (int.TryParse(txtIdCliente.Text, out int idCliente))
             {
                 DialogResult confirmResult = MessageBox.Show("¿Estás seguro de que deseas eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
@@ -98,7 +100,7 @@ namespace PROYECTO.Forms
                     if (conexionSQL.EliminarCliente(idCliente))
                     {
                         MessageBox.Show("Cliente eliminado correctamente.");
-                        dgvTablaClientes.DataSource = conexionSQL.ObtenerClientes();
+                        CargarClientes();
                         LimpiarCamposClientes();
                     }
                     else
@@ -109,15 +111,13 @@ namespace PROYECTO.Forms
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un ID de cliente válido.");
+                MessageBox.Show("Por favor, seleccione un cliente de la lista.");
             }
-            txtIdCliente.Text = "";
         }
 
         private void btnActualizarCliente_Click(object sender, EventArgs e)
         {
-            int idCliente;
-            if (int.TryParse(txtIdCliente.Text, out idCliente))
+            if (int.TryParse(txtIdCliente.Text, out int idCliente))
             {
                 string nombre = txtNombre.Text.Trim();
                 string apellido = txtApellido.Text.Trim();
@@ -129,7 +129,7 @@ namespace PROYECTO.Forms
                     if (conexionSQL.ActualizarCliente(idCliente, nombre, apellido, telefono, correo))
                     {
                         MessageBox.Show("Cliente actualizado correctamente.");
-                        dgvTablaClientes.DataSource = conexionSQL.ObtenerClientes();
+                        CargarClientes();
                         LimpiarCamposClientes();
                     }
                     else
@@ -138,16 +138,18 @@ namespace PROYECTO.Forms
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un ID de cliente válido.");
-            }
-            txtIdCliente.Text = "";
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void LimpiarCamposClientes()
+        {
+            txtIdCliente.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtTelefono.Text = "";
+            txtCorreo.Text = "";
         }
     }
 }

@@ -60,50 +60,32 @@ namespace PROYECTO.Forms
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            ConexionSQL conn = new ConexionSQL();
-            
             try
             {
-                conn.AbrirConexion();
-                string insertQuery = "INSERT INTO Productos(codigoProducto, descripcion, unidadMedida, ubicacion, precioCosto, precioVenta, hay, minimo, maximo) VALUES(@codigoProducto, @descripcion, @unidadMedida, @ubicacion, @precioCosto, @precioVenta, @hay, @minimo, @maximo);";
+                string codigoProducto = textBoxCodigoProducto.Text;
+                string descripcion = textBoxDescripcion.Text;
+                string unidadMedida = comboBoxUnidadMedida.Text;
+                string ubicacion = comboBoxUbicacion.Text;
+                decimal precioCosto = numUpDownPrecioCosto.Value;
+                decimal precioVenta = numUpDownPrecioVenta.Value;
+                int hay = (int)numUpDownHay.Value;
+                int minimo = (int)numUpDownMinimo.Value;
+                int maximo = (int)numUpDownMaximo.Value;
 
-                using (SqlCommand command = new SqlCommand(insertQuery, conn.AbrirConexion()))
+                if (conexionSQL.AgregarProducto(codigoProducto, descripcion, unidadMedida, ubicacion, precioCosto, precioVenta, hay, minimo, maximo))
                 {
-                    command.Parameters.AddWithValue("@codigoProducto", textBoxCodigoProducto.Text);
-                    command.Parameters.AddWithValue("@descripcion", textBoxDescripcion.Text);
-                    command.Parameters.AddWithValue("@unidadMedida", comboBoxUnidadMedida.Text);
-                    command.Parameters.AddWithValue("@ubicacion", comboBoxUnidadMedida.Text);
-                    command.Parameters.AddWithValue("@precioCosto", numUpDownPrecioCosto.Value);
-                    command.Parameters.AddWithValue("@precioVenta", numUpDownPrecioVenta.Value);
-                    command.Parameters.AddWithValue("@hay", numUpDownHay.Value);
-                    command.Parameters.AddWithValue("@minimo", numUpDownMinimo.Value);
-                    command.Parameters.AddWithValue("@maximo", numUpDownMaximo.Value);
-
-                    command.ExecuteNonQuery();
-                    textBoxCodigoProducto.Clear();
-                    textBoxDescripcion.Clear();
-
-                    textBoxCodigoProducto.Enabled = false;
-                    textBoxDescripcion.Enabled = false;
-                    comboBoxUnidadMedida.Enabled = false;
-                    comboBoxUbicacion.Enabled = false;
-                    numUpDownPrecioCosto.Enabled = false;
-                    numUpDownPrecioVenta.Enabled = false;
-                    numUpDownHay.Enabled = false;
-                    numUpDownMinimo.Enabled = false;
-                    numUpDownMaximo.Enabled = false;
-                    buttonGuardar.Enabled = false;
+                    MessageBox.Show("Producto agregado exitosamente");
                     DGproductos.DataSource = conexionSQL.ObtenerProductos();
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar producto");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                conn.CerrarConexion();
             }
         }
 

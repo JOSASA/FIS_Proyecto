@@ -8,7 +8,7 @@ namespace impresionTicket
 {
     public class productos
     {
-        public String codigo {  get; set; }
+        public int codigo {  get; set; }
         public string producto{ get; set; }
         public double precio { get; set; }
         public int cantidad { get; set; }

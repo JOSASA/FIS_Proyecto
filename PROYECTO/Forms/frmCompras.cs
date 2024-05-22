@@ -18,64 +18,69 @@ namespace PROYECTO.Forms
         public frmCompras()
         {
             InitializeComponent();
+            btnActualizarStock.Click += new EventHandler(btnActualizarStock_Click);
         }
 
         private void frmCompras_Load(object sender, EventArgs e)
         {
-            dgvCompra.DataSource = conexionSQL.ObtenerCompra();
-            CargarDatosEnComboBox();
+            CargarProductosConStockBajo();
         }
-        private void CargarDatosEnComboBox()
-        {
-            try
-            {
-                DataTable dtCompras = conexionSQL.ObtenerCompra();
-                if (dtCompras.Rows.Count > 0)
-                {
-                    cmbCompras.Items.Clear();
-                    foreach (DataRow row in dtCompras.Rows)
-                    {
-                        string nombreProducto = row["Producto"].ToString();
-                        cmbCompras.Items.Add(nombreProducto);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron productos.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los datos: " + ex.Message);
-            }
-
-        }
+        
 
         private void btnAgregarCarro_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string nombreProducto = cmbCompras.SelectedItem.ToString();
-                carrito.Add(nombreProducto);
-                MostrarProductosEnCarrito();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al agregar al carrito: " + ex.Message);
-            }
-        }
-        private void MostrarProductosEnCarrito()
-        {
-            lstCarro.Items.Clear();
-            foreach (string producto in carrito)
-            {
-                lstCarro.Items.Add(producto);
-            }
+            
         }
 
         private void cmbCompras_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+        private void CargarProductosConStockBajo()
+        {
+            dgvProductos.DataSource = conexionSQL.ObtenerProductosConStockBajo();
+        }
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void btnActualizarStock_Click(object sender, EventArgs e)
+        {
+            
+
+            if (dgvProductos.SelectedRows.Count > 0)
+            {
+                string codigoProducto = dgvProductos.SelectedRows[0].Cells["codigoProducto"].Value.ToString();
+                int nuevoStock;
+
+                if (int.TryParse(txtNuevoStock.Text, out nuevoStock))
+                {
+                    if (conexionSQL.ActualizarStockProducto(codigoProducto, nuevoStock))
+                    {
+                        MessageBox.Show(this, "Stock actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Cargar los productos con stock bajo después de mostrar el mensaje de éxito
+                        CargarProductosConStockBajo();
+                        txtNuevoStock.Text = string.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar el stock.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un número válido para el nuevo stock.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un producto de la lista.");
+            }
+
+            // Vuelve a habilitar el botón después de terminar el procesamiento
+            btnActualizarStock.Enabled = true;
+        }
+        
     }
 }

@@ -61,58 +61,50 @@ namespace PROYECTO.Forms
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
             ConexionSQL conn = new ConexionSQL();
-            int lenghtCodigo = textBoxCodigoProducto.TextLength;
-            if (lenghtCodigo == 10)
-            {
-                try
-                {
-                    conn.AbrirConexion();
-                    string insertQuery = "INSERT INTO Productos(codigoProducto, descripcion, unidadMedida, ubicacion, precioCosto, precioVenta, hay, minimo, maximo) VALUES(@codigoProducto, @descripcion, @unidadMedida, @ubicacion, @precioCosto, @precioVenta, @hay, @minimo, @maximo);";
-
-                    using (SqlCommand command = new SqlCommand(insertQuery, conn.AbrirConexion()))
-                    {
-                        command.Parameters.AddWithValue("@codigoProducto", textBoxCodigoProducto.Text);
-                        command.Parameters.AddWithValue("@descripcion", textBoxDescripcion.Text);
-                        command.Parameters.AddWithValue("@unidadMedida", comboBoxUnidadMedida.Text);
-                        command.Parameters.AddWithValue("@ubicacion", comboBoxUnidadMedida.Text);
-                        command.Parameters.AddWithValue("@precioCosto", numUpDownPrecioCosto.Value);
-                        command.Parameters.AddWithValue("@precioVenta", numUpDownPrecioVenta.Value);
-                        command.Parameters.AddWithValue("@hay", numUpDownHay.Value);
-                        command.Parameters.AddWithValue("@minimo", numUpDownMinimo.Value);
-                        command.Parameters.AddWithValue("@maximo", numUpDownMaximo.Value);
-
-                        command.ExecuteNonQuery();
-                        textBoxCodigoProducto.Clear();
-                        textBoxDescripcion.Clear();
-
-                        textBoxCodigoProducto.Enabled = false;
-                        textBoxDescripcion.Enabled = false;
-                        comboBoxUnidadMedida.Enabled = false;
-                        comboBoxUbicacion.Enabled = false;
-                        numUpDownPrecioCosto.Enabled = false;
-                        numUpDownPrecioVenta.Enabled = false;
-                        numUpDownHay.Enabled = false;
-                        numUpDownMinimo.Enabled = false;
-                        numUpDownMaximo.Enabled = false;
-                        buttonGuardar.Enabled = false;
-                        DGproductos.DataSource = conexionSQL.ObtenerProductos();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    conn.CerrarConexion();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Codigo de producto invalido.(Solo 10 digitos)");
-            }
             
+            try
+            {
+                conn.AbrirConexion();
+                string insertQuery = "INSERT INTO Productos(codigoProducto, descripcion, unidadMedida, ubicacion, precioCosto, precioVenta, hay, minimo, maximo) VALUES(@codigoProducto, @descripcion, @unidadMedida, @ubicacion, @precioCosto, @precioVenta, @hay, @minimo, @maximo);";
+
+                using (SqlCommand command = new SqlCommand(insertQuery, conn.AbrirConexion()))
+                {
+                    command.Parameters.AddWithValue("@codigoProducto", textBoxCodigoProducto.Text);
+                    command.Parameters.AddWithValue("@descripcion", textBoxDescripcion.Text);
+                    command.Parameters.AddWithValue("@unidadMedida", comboBoxUnidadMedida.Text);
+                    command.Parameters.AddWithValue("@ubicacion", comboBoxUnidadMedida.Text);
+                    command.Parameters.AddWithValue("@precioCosto", numUpDownPrecioCosto.Value);
+                    command.Parameters.AddWithValue("@precioVenta", numUpDownPrecioVenta.Value);
+                    command.Parameters.AddWithValue("@hay", numUpDownHay.Value);
+                    command.Parameters.AddWithValue("@minimo", numUpDownMinimo.Value);
+                    command.Parameters.AddWithValue("@maximo", numUpDownMaximo.Value);
+
+                    command.ExecuteNonQuery();
+                    textBoxCodigoProducto.Clear();
+                    textBoxDescripcion.Clear();
+
+                    textBoxCodigoProducto.Enabled = false;
+                    textBoxDescripcion.Enabled = false;
+                    comboBoxUnidadMedida.Enabled = false;
+                    comboBoxUbicacion.Enabled = false;
+                    numUpDownPrecioCosto.Enabled = false;
+                    numUpDownPrecioVenta.Enabled = false;
+                    numUpDownHay.Enabled = false;
+                    numUpDownMinimo.Enabled = false;
+                    numUpDownMaximo.Enabled = false;
+                    buttonGuardar.Enabled = false;
+                    DGproductos.DataSource = conexionSQL.ObtenerProductos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.CerrarConexion();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -126,11 +118,6 @@ namespace PROYECTO.Forms
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void textBoxCodigoProducto_TextChanged(object sender, EventArgs e)
         {
 
         }

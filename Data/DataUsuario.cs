@@ -102,6 +102,7 @@ namespace Data
             try
             {
 
+
                 //Abrir conexion
                 comandoSQL.Connection = connSQL.AbrirConexion();
 
@@ -113,7 +114,7 @@ namespace Data
 
                 //Agregar parametro
                 comandoSQL.Parameters.AddWithValue("@usuario", usuario);
-                comandoSQL.Parameters.AddWithValue("@password", Encrypt(password));
+                comandoSQL.Parameters.AddWithValue("@pwd", Encrypt(password));
 
                 //Ejecutar query
                 //renglonesAfectados = comandoSQL.ExecuteNonQuery();

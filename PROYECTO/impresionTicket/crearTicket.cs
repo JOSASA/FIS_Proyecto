@@ -133,7 +133,7 @@ namespace impresionTicket
             {
                 DrawText(g, cb, listaProductos[i].producto, fuente, Brushes.Black, posX, posY);
                 posY += 20;
-                DrawText(g, cb, listaProductos[i].codigo + espaciar(listaProductos[i].cantidad.ToString().Length, 28) + listaProductos[i].precio + espaciar(listaProductos[i].cantidad.ToString().Length, 23) + listaProductos[i].cantidad + espaciar(listaProductos[i].cantidad.ToString().Length, 34) + listaProductos[i].subtotal + " ", fuente, Brushes.Black, posX, posY);
+                DrawText(g, cb, listaProductos[i].codigo + espaciar(listaProductos[i].cantidad.ToString().Length, 28) + listaProductos[i].precioVenta + espaciar(listaProductos[i].cantidad.ToString().Length, 23) + listaProductos[i].cantidad + espaciar(listaProductos[i].cantidad.ToString().Length, 34) + listaProductos[i].subtotal + " ", fuente, Brushes.Black, posX, posY);
                 posY += 25;
             }
 

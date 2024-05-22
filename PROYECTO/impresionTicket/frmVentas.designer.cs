@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.DGproductos = new System.Windows.Forms.DataGridView();
-            this.CodigoDeBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.labelLenght = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonEnviar = new System.Windows.Forms.RadioButton();
+            this.radioButtonImprimir = new System.Windows.Forms.RadioButton();
             this.labelCodigo = new System.Windows.Forms.Label();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,14 +44,11 @@
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
-            this.radioButtonImprimir = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonEnviar = new System.Windows.Forms.RadioButton();
-            this.labelLenght = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // DGproductos
@@ -59,12 +56,6 @@
             this.DGproductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodigoDeBarras,
-            this.producto,
-            this.precio,
-            this.cantidad,
-            this.subtotal});
             this.DGproductos.Location = new System.Drawing.Point(62, 249);
             this.DGproductos.Name = "DGproductos";
             this.DGproductos.RowHeadersWidth = 51;
@@ -72,47 +63,10 @@
             this.DGproductos.Size = new System.Drawing.Size(678, 400);
             this.DGproductos.TabIndex = 0;
             // 
-            // CodigoDeBarras
-            // 
-            this.CodigoDeBarras.HeaderText = "Codigo de Barras";
-            this.CodigoDeBarras.MinimumWidth = 6;
-            this.CodigoDeBarras.Name = "CodigoDeBarras";
-            this.CodigoDeBarras.ReadOnly = true;
-            this.CodigoDeBarras.Width = 125;
-            // 
-            // producto
-            // 
-            this.producto.HeaderText = "Producto";
-            this.producto.MinimumWidth = 6;
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            this.producto.Width = 125;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.MinimumWidth = 6;
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 125;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 6;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Width = 125;
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.MinimumWidth = 6;
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            this.subtotal.Width = 125;
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnEliminar);
+            this.panel2.Controls.Add(this.buttonSearch);
             this.panel2.Controls.Add(this.labelLenght);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.DGproductos);
@@ -130,6 +84,56 @@
             this.panel2.Size = new System.Drawing.Size(1277, 813);
             this.panel2.TabIndex = 3;
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(617, 153);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 11;
+            this.buttonSearch.Text = "search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // labelLenght
+            // 
+            this.labelLenght.AutoSize = true;
+            this.labelLenght.Location = new System.Drawing.Point(344, 176);
+            this.labelLenght.Name = "labelLenght";
+            this.labelLenght.Size = new System.Drawing.Size(14, 16);
+            this.labelLenght.TabIndex = 10;
+            this.labelLenght.Text = "0";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButtonEnviar);
+            this.panel1.Controls.Add(this.radioButtonImprimir);
+            this.panel1.Location = new System.Drawing.Point(892, 82);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 91);
+            this.panel1.TabIndex = 9;
+            // 
+            // radioButtonEnviar
+            // 
+            this.radioButtonEnviar.AutoSize = true;
+            this.radioButtonEnviar.Location = new System.Drawing.Point(23, 46);
+            this.radioButtonEnviar.Name = "radioButtonEnviar";
+            this.radioButtonEnviar.Size = new System.Drawing.Size(131, 20);
+            this.radioButtonEnviar.TabIndex = 9;
+            this.radioButtonEnviar.TabStop = true;
+            this.radioButtonEnviar.Text = "Enviar por correo";
+            this.radioButtonEnviar.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonImprimir
+            // 
+            this.radioButtonImprimir.AutoSize = true;
+            this.radioButtonImprimir.Location = new System.Drawing.Point(23, 20);
+            this.radioButtonImprimir.Name = "radioButtonImprimir";
+            this.radioButtonImprimir.Size = new System.Drawing.Size(75, 20);
+            this.radioButtonImprimir.TabIndex = 8;
+            this.radioButtonImprimir.TabStop = true;
+            this.radioButtonImprimir.Text = "Imprimir";
+            this.radioButtonImprimir.UseVisualStyleBackColor = true;
+            // 
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
@@ -142,7 +146,7 @@
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Location = new System.Drawing.Point(449, 151);
+            this.textBoxCodigo.Location = new System.Drawing.Point(347, 151);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(243, 22);
             this.textBoxCodigo.TabIndex = 6;
@@ -207,45 +211,15 @@
             this.labelTotal.TabIndex = 0;
             this.labelTotal.Text = "Total: ";
             // 
-            // radioButtonImprimir
+            // btnEliminar
             // 
-            this.radioButtonImprimir.AutoSize = true;
-            this.radioButtonImprimir.Location = new System.Drawing.Point(23, 20);
-            this.radioButtonImprimir.Name = "radioButtonImprimir";
-            this.radioButtonImprimir.Size = new System.Drawing.Size(75, 20);
-            this.radioButtonImprimir.TabIndex = 8;
-            this.radioButtonImprimir.TabStop = true;
-            this.radioButtonImprimir.Text = "Imprimir";
-            this.radioButtonImprimir.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.radioButtonEnviar);
-            this.panel1.Controls.Add(this.radioButtonImprimir);
-            this.panel1.Location = new System.Drawing.Point(892, 82);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 91);
-            this.panel1.TabIndex = 9;
-            // 
-            // radioButtonEnviar
-            // 
-            this.radioButtonEnviar.AutoSize = true;
-            this.radioButtonEnviar.Location = new System.Drawing.Point(23, 46);
-            this.radioButtonEnviar.Name = "radioButtonEnviar";
-            this.radioButtonEnviar.Size = new System.Drawing.Size(131, 20);
-            this.radioButtonEnviar.TabIndex = 9;
-            this.radioButtonEnviar.TabStop = true;
-            this.radioButtonEnviar.Text = "Enviar por correo";
-            this.radioButtonEnviar.UseVisualStyleBackColor = true;
-            // 
-            // labelLenght
-            // 
-            this.labelLenght.AutoSize = true;
-            this.labelLenght.Location = new System.Drawing.Point(449, 180);
-            this.labelLenght.Name = "labelLenght";
-            this.labelLenght.Size = new System.Drawing.Size(14, 16);
-            this.labelLenght.TabIndex = 10;
-            this.labelLenght.Text = "0";
+            this.btnEliminar.Location = new System.Drawing.Point(62, 192);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(98, 33);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // frmVentas
             // 
@@ -259,9 +233,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,11 +243,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DGproductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoDeBarras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelCodigo;
         private System.Windows.Forms.TextBox textBoxCodigo;
@@ -287,5 +256,7 @@
         private System.Windows.Forms.RadioButton radioButtonEnviar;
         private System.Windows.Forms.RadioButton radioButtonImprimir;
         private System.Windows.Forms.Label labelLenght;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

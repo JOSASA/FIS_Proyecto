@@ -71,6 +71,56 @@ namespace Data
                 return null;
             }
         }
+        public DataTable buscarCoincidencias(string textoBusqueda, string nombreTabla, string referencia)
+        {
+            DataTable tablaResultados = new DataTable();
+            try
+            {
+                string consulta = $"SELECT * FROM {nombreTabla} WHERE {referencia} LIKE '%{textoBusqueda}%'";
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(tablaResultados);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tablaResultados;
+        }
+        public DataTable ObtenerDatosTabla(string nombreTabla)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                string consulta = $"SELECT * FROM {nombreTabla}";
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(tabla);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tabla;
+        }
         public DataTable ObtenerCompra()
         {
             DataTable dtCompras = new DataTable();
@@ -143,6 +193,30 @@ namespace Data
             }
             return dtCompras;
         }
+        public DataTable ObtenerLoginHistory()
+        {
+            DataTable dtCompras = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM LoginHistory", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtCompras);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtCompras;
+        }
         public DataTable ObtenerProductos()
         {
             DataTable dtClientes = new DataTable();
@@ -190,6 +264,105 @@ namespace Data
                 conn.Close();
             }
             return dtClientes;
+        }
+        public DataTable ObtenerVentas()
+        {
+            DataTable dtClientes = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Ventas", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtClientes);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtClientes;
+        }
+        public DataTable ObtenerCompras()
+        {
+            DataTable dtClientes = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT codigoProducto, descripcion, precioCosto, hay, precioCosto * hay AS valor_total FROM productos;", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtClientes);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtClientes;
+        }
+        public double ObtenerTotalCompras()
+        {
+            double total = 0.0; // Initialize total to 0.0 for double precision
+            ConexionSQL conn = new ConexionSQL();
+            using (conn.AbrirConexion()) // Use using for connection management
+            {
+                try
+                {
+                    conn.AbrirConexion();
+
+                    string selectQuery = "SELECT SUM(precio_costo * hay) AS valor_total_inventario FROM productos;";
+                    SqlCommand command = new SqlCommand(selectQuery, conn.AbrirConexion());
+
+                    using (SqlDataReader reader = command.ExecuteReader()) // Use using for reader management
+                    {
+                        if (reader.Read())
+                        {
+                            total = reader.GetDouble(reader.GetOrdinal("valor_total_inventario")); // Get double directly
+                        }
+                        else
+                        {
+                            // Handle the case where no records are found (optional)
+                            // Console.WriteLine("No records found in productos table.");
+                        }
+                    }
+                }
+                catch (SqlException ex) // Catch specific SQL exceptions
+                {
+                    Console.WriteLine("SQL Exception: " + ex.Message);
+                }
+                catch (Exception ex) // Catch general exceptions for unexpected errors
+                {
+                    Console.WriteLine("General Exception: " + ex.Message);
+                }
+            }
+
+            return total;
+        }
+
+        public void ActualizarStock(string codigoProducto, int cantidadVendida)
+        {
+            string updateQuery = "UPDATE Productos SET hay = hay - @cantidadVendida WHERE codigoProducto = @codigoProducto";
+
+            using (SqlCommand command = new SqlCommand(updateQuery, conn))
+            {
+                command.Parameters.AddWithValue("@codigoProducto", codigoProducto);
+                command.Parameters.AddWithValue("@cantidadVendida", cantidadVendida);
+
+                command.ExecuteNonQuery();
+            }
         }
         public bool AgregarCliente(int idCliente, string nombre, string apellido, string telefono, string correo)
         {

@@ -59,6 +59,12 @@
       <DependentUpon>FormSendMail.cs</DependentUpon>
     </Compile>
     <Compile Include="Enviar correo\sendEmail.cs" />
+    <Compile Include="Forms\formLoginHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formLoginHistory.Designer.cs">
+      <DependentUpon>formLoginHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +77,11 @@
     <Compile Include="Forms\frmCompras.Designer.cs">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmConfiguracion.cs">
+    <Compile Include="Forms\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmConfiguracion.Designer.cs">
-      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    <Compile Include="Forms\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmHome.cs">
       <SubType>Form</SubType>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="Forms\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmUsuarios.cs">
       <SubType>Form</SubType>
@@ -132,14 +144,17 @@
     <EmbeddedResource Include="Enviar correo\FormSendMail.resx">
       <DependentUpon>FormSendMail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formLoginHistory.resx">
+      <DependentUpon>formLoginHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCompras.resx">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmConfiguracion.resx">
-      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -152,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

@@ -110,7 +110,7 @@ namespace PROYECTO
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-                OpenChildForm(new frmVentas(), sender);
+                OpenChildForm(new formLoginHistory(), sender);
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace PROYECTO
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmCompras(), sender);
+            OpenChildForm(new frmVentas(), sender);
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace PROYECTO
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmConfiguracion(), sender);
+            OpenChildForm(new frmReportes(), sender);
         }
 
         private void labelNombre_Click(object sender, EventArgs e)

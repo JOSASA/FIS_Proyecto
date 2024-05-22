@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,42 @@ namespace Data
         public int renglonesAfectados = 0;
         public String NombreDeUsuario = "";
         public String UserName = "";
+
+        public string Encrypt (string password)
+        {
+        
+            string hash = "ABARROTECONCHA";
+            byte[] data = Encoding.UTF8.GetBytes(password);
+
+            MD5 md5 = MD5.Create();
+            TripleDES tripleDES = TripleDES.Create();
+
+            tripleDES.Key = md5.ComputeHash(Encoding.UTF8.GetBytes(hash));
+            tripleDES.Mode = CipherMode.ECB;
+
+            ICryptoTransform transform = tripleDES.CreateEncryptor();
+            byte[] result = transform.TransformFinalBlock(data, 0, data.Length);
+          
+            return Convert.ToBase64String(result);
+        }
+
+        public string Decrypt(string password)
+        {
+        
+            string hash = "ABARROTECONCHA";
+            byte[] data = Convert.FromBase64String(password);
+        
+            MD5 md5 = MD5.Create();
+            TripleDES tripleDES = TripleDES.Create();
+        
+            tripleDES.Key = md5.ComputeHash(Encoding.UTF8.GetBytes(hash));
+            tripleDES.Mode = CipherMode.ECB;
+        
+            ICryptoTransform transform = tripleDES.CreateDecryptor();
+            byte[] result = transform.TransformFinalBlock(data, 0, data.Length);
+        
+            return Encoding.UTF8.GetString(result);
+        }
 
         public void Insertar(String nombre, String apellidoP, String apellidoM, String correo, String usuario, String password, String telefono, int perfil)
         {
@@ -36,7 +73,7 @@ namespace Data
                 comandoSQL.Parameters.AddWithValue("@apellidom", apellidoM);
                 comandoSQL.Parameters.AddWithValue("@correo", correo);
                 comandoSQL.Parameters.AddWithValue("@usuario", usuario);
-                comandoSQL.Parameters.AddWithValue("@password", password);
+                comandoSQL.Parameters.AddWithValue("@password", Encrypt(password));
                 comandoSQL.Parameters.AddWithValue("@telefono", telefono);
                 comandoSQL.Parameters.AddWithValue("@idPerfil", perfil);
 
@@ -77,7 +114,7 @@ namespace Data
 
                 //Agregar parametro
                 comandoSQL.Parameters.AddWithValue("@usuario", usuario);
-                comandoSQL.Parameters.AddWithValue("@pwd", password);
+                comandoSQL.Parameters.AddWithValue("@pwd", Encrypt(password));
 
                 //Ejecutar query
                 //renglonesAfectados = comandoSQL.ExecuteNonQuery();

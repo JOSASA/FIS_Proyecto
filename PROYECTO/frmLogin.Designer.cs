@@ -37,17 +37,14 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pbOcultar = new System.Windows.Forms.PictureBox();
             this.pbMostrar = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Location = new System.Drawing.Point(69, 193);
+            this.txtUsuario.Location = new System.Drawing.Point(160, 89);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(95, 20);
@@ -57,11 +54,10 @@
             // 
             this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPassword.AutoSize = true;
-            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
-            this.labelPassword.ForeColor = System.Drawing.Color.White;
-            this.labelPassword.Location = new System.Drawing.Point(66, 234);
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelPassword.Location = new System.Drawing.Point(75, 121);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(61, 13);
+            this.labelPassword.Size = new System.Drawing.Size(85, 18);
             this.labelPassword.TabIndex = 7;
             this.labelPassword.Text = "Contraseña";
             // 
@@ -69,38 +65,38 @@
             // 
             this.labelUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelUsuario.AutoSize = true;
-            this.labelUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelUsuario.Location = new System.Drawing.Point(66, 178);
+            this.labelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labelUsuario.Location = new System.Drawing.Point(100, 89);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(43, 13);
+            this.labelUsuario.Size = new System.Drawing.Size(60, 18);
             this.labelUsuario.TabIndex = 6;
             this.labelUsuario.Text = "Usuario";
             // 
             // btnIngresar
             // 
             this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(79, 286);
+            this.btnIngresar.Location = new System.Drawing.Point(160, 154);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(70, 25);
+            this.btnIngresar.Size = new System.Drawing.Size(95, 29);
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            this.btnIngresar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnIngresar_MouseMove);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(79, 333);
+            this.btnCerrar.Location = new System.Drawing.Point(316, 234);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(70, 25);
+            this.btnCerrar.Size = new System.Drawing.Size(89, 31);
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -109,7 +105,7 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPassword.Location = new System.Drawing.Point(69, 249);
+            this.txtPassword.Location = new System.Drawing.Point(160, 121);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -118,9 +114,8 @@
             // 
             // pbOcultar
             // 
-            this.pbOcultar.BackColor = System.Drawing.Color.White;
             this.pbOcultar.Image = ((System.Drawing.Image)(resources.GetObject("pbOcultar.Image")));
-            this.pbOcultar.Location = new System.Drawing.Point(170, 249);
+            this.pbOcultar.Location = new System.Drawing.Point(261, 121);
             this.pbOcultar.Name = "pbOcultar";
             this.pbOcultar.Size = new System.Drawing.Size(24, 20);
             this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,9 +125,8 @@
             // 
             // pbMostrar
             // 
-            this.pbMostrar.BackColor = System.Drawing.Color.White;
             this.pbMostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrar.Image")));
-            this.pbMostrar.Location = new System.Drawing.Point(170, 249);
+            this.pbMostrar.Location = new System.Drawing.Point(261, 121);
             this.pbMostrar.Name = "pbMostrar";
             this.pbMostrar.Size = new System.Drawing.Size(24, 20);
             this.pbMostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,32 +134,13 @@
             this.pbMostrar.TabStop = false;
             this.pbMostrar.Click += new System.EventHandler(this.pbMostrar_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(-2, 410);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 25);
-            this.panel1.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(235, 435);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(417, 277);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbMostrar);
             this.Controls.Add(this.pbOcultar);
             this.Controls.Add(this.btnCerrar);
@@ -174,14 +149,11 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,8 +168,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pbOcultar;
         private System.Windows.Forms.PictureBox pbMostrar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

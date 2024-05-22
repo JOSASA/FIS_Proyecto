@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
+using Data;
+using impresionTicket;
 using PROYECTO.Forms;
 
 namespace PROYECTO
@@ -21,18 +25,7 @@ namespace PROYECTO
             Text = string.Empty;
             ControlBox = false;
             MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
-            try
-            {
-                frmLogin login = new frmLogin();
-                login.ShowDialog();
-                labelNombre.Text = ("   " + Business.Utilerias.G_Usuario);
-                //lblDate.Text = DateTime.Now.ToString();
-                lblDate.Text = DateTime.Now.ToString();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("[fmr_principal_Load] " + ex.Message);
-            }
+            
         }
 
 
@@ -48,12 +41,41 @@ namespace PROYECTO
 
         private void iconcerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                ConexionSQL conn = new ConexionSQL();
+                conn.AbrirConexion();
+
+                string updateQuery = "UPDATE LoginHistory SET LogoutTime = @LogoutTime WHERE LoginTime = @LoginTime";
+                using (SqlCommand command = new SqlCommand(updateQuery, conn.AbrirConexion()))
+                {
+                    command.Parameters.AddWithValue("@LogoutTime", DateTime.Now);
+                    command.Parameters.AddWithValue("@LoginTime", Utilerias.G_LoginTime);
+                    command.ExecuteNonQuery();
+                }
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[iconcerrar_Click] " + ex.Message);
+            }
         }
 
         private void frmInterfaz_Load(object sender, EventArgs e)
         {
-            
+            try
+            {
+                frmLogin login = new frmLogin();
+                login.ShowDialog();
+                labelNombre.Text = ("   " + Business.Utilerias.G_Usuario);
+                //lblDate.Text = DateTime.Now.ToString();
+                lblDate.Text = DateTime.Now.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[fmr_principal_Load] " + ex.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -79,7 +101,7 @@ namespace PROYECTO
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmPedidos(), sender);
+            OpenChildForm(new frmInventario(), sender);
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -88,7 +110,7 @@ namespace PROYECTO
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmVentas(), sender);
+                OpenChildForm(new frmVentas(), sender);
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
@@ -114,6 +136,11 @@ namespace PROYECTO
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmConfiguracion(), sender);
+        }
+
+        private void labelNombre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

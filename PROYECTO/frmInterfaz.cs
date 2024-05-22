@@ -53,7 +53,7 @@ namespace PROYECTO
                     command.Parameters.AddWithValue("@LoginTime", Utilerias.G_LoginTime);
                     command.ExecuteNonQuery();
                 }
-                conn.CerrarConexion();
+
                 Application.Exit();
             }
             catch (Exception ex)

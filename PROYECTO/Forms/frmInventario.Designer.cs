@@ -31,7 +31,6 @@ namespace PROYECTO.Forms
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.DGproductos = new System.Windows.Forms.DataGridView();
             this.textBoxCodigoProducto = new System.Windows.Forms.TextBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.comboBoxUnidadMedida = new System.Windows.Forms.ComboBox();
@@ -55,8 +54,8 @@ namespace PROYECTO.Forms
             this.buttonNuevoProducto = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.DGproductos = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownPrecioCosto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownMaximo)).BeginInit();
@@ -64,6 +63,7 @@ namespace PROYECTO.Forms
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownHay)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -76,18 +76,6 @@ namespace PROYECTO.Forms
             this.panel3.Size = new System.Drawing.Size(988, 607);
             this.panel3.TabIndex = 46;
             // 
-            // DGproductos
-            // 
-            this.DGproductos.BackgroundColor = System.Drawing.Color.White;
-            this.DGproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGproductos.Location = new System.Drawing.Point(6, 95);
-            this.DGproductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DGproductos.Name = "DGproductos";
-            this.DGproductos.RowHeadersWidth = 51;
-            this.DGproductos.Size = new System.Drawing.Size(955, 477);
-            this.DGproductos.TabIndex = 0;
-            this.DGproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // textBoxCodigoProducto
             // 
             this.textBoxCodigoProducto.Location = new System.Drawing.Point(1280, 100);
@@ -95,7 +83,6 @@ namespace PROYECTO.Forms
             this.textBoxCodigoProducto.Name = "textBoxCodigoProducto";
             this.textBoxCodigoProducto.Size = new System.Drawing.Size(150, 22);
             this.textBoxCodigoProducto.TabIndex = 45;
-            this.textBoxCodigoProducto.TextChanged += new System.EventHandler(this.textBoxCodigoProducto_TextChanged);
             // 
             // textBoxDescripcion
             // 
@@ -330,6 +317,18 @@ namespace PROYECTO.Forms
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // DGproductos
+            // 
+            this.DGproductos.BackgroundColor = System.Drawing.Color.White;
+            this.DGproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGproductos.Location = new System.Drawing.Point(6, 95);
+            this.DGproductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DGproductos.Name = "DGproductos";
+            this.DGproductos.RowHeadersWidth = 51;
+            this.DGproductos.Size = new System.Drawing.Size(955, 477);
+            this.DGproductos.TabIndex = 0;
+            this.DGproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -342,7 +341,6 @@ namespace PROYECTO.Forms
             this.Text = "frmProductos";
             this.Load += new System.EventHandler(this.frmInventario_Load);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownPrecioCosto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownMaximo)).EndInit();
@@ -351,6 +349,7 @@ namespace PROYECTO.Forms
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGproductos)).EndInit();
             this.ResumeLayout(false);
 
         }

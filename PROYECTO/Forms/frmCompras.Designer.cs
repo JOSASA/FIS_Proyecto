@@ -28,96 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvCompra = new System.Windows.Forms.DataGridView();
-            this.btnAgregarCarro = new System.Windows.Forms.Button();
-            this.lstCarro = new System.Windows.Forms.ListBox();
-            this.cmbCompras = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).BeginInit();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.txtNuevoStock = new System.Windows.Forms.TextBox();
+            this.btnActualizarStock = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvCompra
+            // dgvProductos
             // 
-            this.dgvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompra.Location = new System.Drawing.Point(581, 151);
-            this.dgvCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvCompra.Name = "dgvCompra";
-            this.dgvCompra.RowHeadersWidth = 51;
-            this.dgvCompra.Size = new System.Drawing.Size(453, 185);
-            this.dgvCompra.TabIndex = 0;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(224, 163);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.Size = new System.Drawing.Size(550, 150);
+            this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
-            // btnAgregarCarro
+            // txtNuevoStock
             // 
-
-            this.btnAgregarCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCarro.Location = new System.Drawing.Point(397, 151);
-            this.btnAgregarCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAgregarCarro.Name = "btnAgregarCarro";
-            this.btnAgregarCarro.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAgregarCarro.Size = new System.Drawing.Size(157, 28);
-
-            this.btnAgregarCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCarro.Location = new System.Drawing.Point(298, 123);
-            this.btnAgregarCarro.Name = "btnAgregarCarro";
-            this.btnAgregarCarro.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAgregarCarro.Size = new System.Drawing.Size(118, 49);
- 
-            this.btnAgregarCarro.TabIndex = 1;
-            this.btnAgregarCarro.Text = "Agregar al carrito";
-            this.btnAgregarCarro.UseVisualStyleBackColor = true;
-            this.btnAgregarCarro.Click += new System.EventHandler(this.btnAgregarCarro_Click);
+            this.txtNuevoStock.Location = new System.Drawing.Point(224, 90);
+            this.txtNuevoStock.Name = "txtNuevoStock";
+            this.txtNuevoStock.Size = new System.Drawing.Size(100, 20);
+            this.txtNuevoStock.TabIndex = 2;
             // 
-            // lstCarro
+            // btnActualizarStock
             // 
-            this.lstCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstCarro.FormattingEnabled = true;
-
-            this.lstCarro.ItemHeight = 17;
-            this.lstCarro.Location = new System.Drawing.Point(397, 219);
-            this.lstCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lstCarro.Name = "lstCarro";
-            this.lstCarro.Size = new System.Drawing.Size(156, 106);
-
-            this.lstCarro.ItemHeight = 18;
-            this.lstCarro.Location = new System.Drawing.Point(298, 178);
-            this.lstCarro.Name = "lstCarro";
-            this.lstCarro.Size = new System.Drawing.Size(118, 94);
-
-            this.lstCarro.TabIndex = 3;
-            // 
-            // cmbCompras
-            // 
-            this.cmbCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCompras.FormattingEnabled = true;
-            this.cmbCompras.Location = new System.Drawing.Point(207, 151);
-            this.cmbCompras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbCompras.Name = "cmbCompras";
-            this.cmbCompras.Size = new System.Drawing.Size(160, 25);
-            this.cmbCompras.TabIndex = 4;
-            this.cmbCompras.SelectedIndexChanged += new System.EventHandler(this.cmbCompras_SelectedIndexChanged);
+            this.btnActualizarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarStock.Location = new System.Drawing.Point(399, 90);
+            this.btnActualizarStock.Name = "btnActualizarStock";
+            this.btnActualizarStock.Size = new System.Drawing.Size(75, 38);
+            this.btnActualizarStock.TabIndex = 3;
+            this.btnActualizarStock.Text = "Actualizar Stock";
+            this.btnActualizarStock.UseVisualStyleBackColor = true;
+            this.btnActualizarStock.Click += new System.EventHandler(this.btnActualizarStock_Click);
             // 
             // frmCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.cmbCompras);
-            this.Controls.Add(this.lstCarro);
-            this.Controls.Add(this.btnAgregarCarro);
-            this.Controls.Add(this.dgvCompra);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnActualizarStock);
+            this.Controls.Add(this.txtNuevoStock);
+            this.Controls.Add(this.dgvProductos);
             this.Name = "frmCompras";
             this.Text = "Compras";
             this.Load += new System.EventHandler(this.frmCompras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvCompra;
-        private System.Windows.Forms.Button btnAgregarCarro;
-        private System.Windows.Forms.ListBox lstCarro;
-        private System.Windows.Forms.ComboBox cmbCompras;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.TextBox txtNuevoStock;
+        private System.Windows.Forms.Button btnActualizarStock;
     }
 }

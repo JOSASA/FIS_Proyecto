@@ -87,7 +87,6 @@
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            this.btnIngresar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnIngresar_KeyPress);
             // 
             // btnCerrar
             // 
@@ -153,8 +152,6 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmLogin_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter);
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).EndInit();
             this.ResumeLayout(false);
